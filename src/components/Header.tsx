@@ -55,12 +55,12 @@ export const Header = () => {
           paddingBottom: isScrolled ? 8 : 12,
           borderRadius: isScrolled ? 9999 : 0,
           backgroundColor: isScrolled 
-            ? "rgba(255, 255, 255, 0.92)" 
-            : "rgba(255, 255, 255, 0.8)",
+            ? "rgba(10, 10, 10, 0.92)" 
+            : "rgba(10, 10, 10, 0.8)",
           borderWidth: 1,
           borderColor: isScrolled 
-            ? "rgba(255, 255, 255, 0.3)" 
-            : "rgba(0, 0, 0, 0.05)",
+            ? "rgba(255, 255, 255, 0.1)" 
+            : "rgba(255, 255, 255, 0.05)",
           boxShadow: isScrolled
             ? "0px 8px 32px -8px rgba(0, 0, 0, 0.2)"
             : "0px 0px 0px 0px rgba(0, 0, 0, 0)",
@@ -76,18 +76,36 @@ export const Header = () => {
         <div className="hidden md:flex items-center gap-4">
           <Link
             to="/seguros"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
           >
-            Nossos Seguros
+            Seguros
           </Link>
           <a
-            href="tel:+5511979699832"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            href="/#seguros"
+            className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
+          >
+            Consórcios
+          </a>
+          <a
+            href="/#seguros"
+            className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
+          >
+            Planos de Vida
+          </a>
+          <a
+            href="/#sobre-nos"
+            className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
+          >
+            Sobre Nós
+          </a>
+          <a
+            href="tel:+5511947645967"
+            className="flex items-center gap-2 text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
           >
             <Phone size={16} />
-            <span>(11) 97969-9832</span>
+            <span>(11) 94764-5967</span>
           </a>
-          <Button variant="cta" size="sm" className="rounded-full" asChild>
+          <Button variant="cta" size="sm" className="rounded-full bg-cyan-600 hover:bg-cyan-500 text-white" asChild>
             <Link to="/cotacao">Solicitar Cotação</Link>
           </Button>
         </div>
@@ -111,26 +129,47 @@ export const Header = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden mt-2 mx-4 bg-white/95 backdrop-blur-xl rounded-2xl border border-slate-200 shadow-lg overflow-hidden"
+          className="md:hidden mt-2 mx-4 bg-[#111]/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-lg overflow-hidden"
         >
           <div className="p-4 space-y-3">
             <Link
               to="/seguros"
-              className="block px-4 py-3 text-sm font-medium text-foreground hover:bg-slate-50 rounded-xl transition-colors"
+              className="block px-4 py-3 text-sm font-medium text-white hover:bg-white/5 rounded-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Nossos Seguros
+              Seguros
             </Link>
             <a
-              href="tel:+5511979699832"
-              className="flex items-center gap-2 px-4 py-3 text-sm text-muted-foreground hover:bg-slate-50 rounded-xl transition-colors"
+              href="/#seguros"
+              className="block px-4 py-3 text-sm font-medium text-white hover:bg-white/5 rounded-xl transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Consórcios
+            </a>
+            <a
+              href="/#seguros"
+              className="block px-4 py-3 text-sm font-medium text-white hover:bg-white/5 rounded-xl transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Planos de Vida
+            </a>
+            <a
+              href="/#sobre-nos"
+              className="block px-4 py-3 text-sm font-medium text-white hover:bg-white/5 rounded-xl transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Sobre Nós
+            </a>
+            <a
+              href="tel:+5511947645967"
+              className="flex items-center gap-2 px-4 py-3 text-sm text-neutral-400 hover:bg-white/5 rounded-xl transition-colors"
             >
               <Phone size={16} />
-              <span>(11) 97969-9832</span>
+              <span>(11) 94764-5967</span>
             </a>
             <Button 
               variant="cta" 
-              className="w-full rounded-xl" 
+              className="w-full rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white" 
               asChild
             >
               <Link to="/cotacao" onClick={() => setIsMobileMenuOpen(false)}>

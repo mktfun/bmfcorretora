@@ -183,8 +183,8 @@ const InsuranceTile = ({
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className={cn(
         "relative overflow-hidden cursor-pointer group",
-        "bg-white rounded-2xl md:rounded-3xl border border-slate-200/60",
-        "shadow-lg transition-shadow duration-300",
+        "bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 hover:border-cyan-500/50",
+        "shadow-sm hover:shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-300",
         // Only apply spans on md+ screens
         colSpan === 2 && "md:col-span-2",
         rowSpan === 2 && "md:row-span-2"
@@ -213,7 +213,7 @@ const InsuranceTile = ({
       <div 
         className={cn(
           "absolute inset-0 rounded-2xl md:rounded-3xl ring-2 ring-transparent transition-all duration-300",
-          isHovered && "ring-secondary/20"
+          isHovered && "ring-cyan-500/20"
         )}
       />
 
@@ -244,12 +244,12 @@ const InsuranceTile = ({
           </div>
 
           {/* Title */}
-          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1 md:mb-2">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 md:mb-2">
             {title}
           </h3>
 
           {/* Description */}
-          <p className="text-muted-foreground text-sm md:text-base leading-relaxed line-clamp-2 md:line-clamp-none">
+          <p className="text-neutral-400 text-sm md:text-base leading-relaxed line-clamp-2 md:line-clamp-none">
             {description}
           </p>
         </div>
@@ -257,7 +257,7 @@ const InsuranceTile = ({
         {/* CTA Button */}
         <div 
           className={cn(
-            "flex items-center gap-2 text-secondary font-semibold mt-4 md:mt-6",
+            "flex items-center gap-2 text-cyan-400 font-semibold mt-4 md:mt-6",
             "transition-all duration-300",
             "opacity-70 translate-y-1",
             isHovered && "opacity-100 translate-y-0"
@@ -288,7 +288,7 @@ const InsuranceTile = ({
 
 const InsuranceHub = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 via-white to-slate-50">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a]">
       <Header />
       
       <main className="flex-1 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-24">
@@ -298,7 +298,7 @@ const InsuranceHub = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary mb-4 md:mb-5"
+            className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-4 py-1.5 text-sm font-medium text-cyan-400 mb-4 md:mb-5"
           >
             <Shield size={16} />
             <span>Encontre o seguro ideal</span>
@@ -308,7 +308,7 @@ const InsuranceHub = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4"
           >
             Qual proteção você busca hoje?
           </motion.h1>
@@ -317,7 +317,7 @@ const InsuranceHub = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-xl mx-auto"
+            className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto"
           >
             Selecione uma categoria para iniciar sua cotação personalizada
           </motion.p>

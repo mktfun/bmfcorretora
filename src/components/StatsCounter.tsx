@@ -9,7 +9,7 @@ const stats = [
     prefix: "+",
     suffix: "",
     label: "anos de experiência",
-    gradient: "from-primary/10 to-primary/5",
+    gradient: "from-cyan-500/20 to-blue-500/10",
   },
   {
     icon: Users,
@@ -17,7 +17,7 @@ const stats = [
     prefix: "+",
     suffix: "",
     label: "clientes protegidos",
-    gradient: "from-primary/10 to-primary/5",
+    gradient: "from-cyan-500/20 to-blue-500/10",
   },
   {
     icon: BadgeDollarSign,
@@ -25,7 +25,7 @@ const stats = [
     prefix: "R$ ",
     suffix: "M+",
     label: "em sinistros pagos",
-    gradient: "from-primary/10 to-primary/5",
+    gradient: "from-cyan-500/20 to-blue-500/10",
   },
   {
     icon: ThumbsUp,
@@ -33,7 +33,7 @@ const stats = [
     prefix: "",
     suffix: "%",
     label: "de satisfação",
-    gradient: "from-primary/10 to-primary/5",
+    gradient: "from-cyan-500/20 to-blue-500/10",
   },
 ];
 
@@ -89,18 +89,18 @@ export const StatsCounter = () => {
             className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} rounded-2xl blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
           />
           
-          <div className="relative glass-card rounded-2xl p-6 lg:p-8 bg-white border border-[#f0f0f0] shadow-sm">
+          <div className="relative glass-card rounded-2xl p-6 lg:p-8 bg-white/5 border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.5)]">
             {/* Icon */}
             <motion.div
-              className={`mx-auto mb-4 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center`}
+              className={`mx-auto mb-4 w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center`}
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
             >
-              <stat.icon size={24} className="text-primary" />
+              <stat.icon size={24} className="text-cyan-400" />
             </motion.div>
 
             {/* Number */}
-            <div className="text-3xl lg:text-4xl font-bold text-foreground mb-1">
+            <div className="text-3xl lg:text-4xl font-bold text-white mb-1">
               <AnimatedCounter 
                 value={stat.value} 
                 prefix={stat.prefix} 
@@ -109,7 +109,7 @@ export const StatsCounter = () => {
             </div>
 
             {/* Label */}
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-neutral-400">
               {stat.label}
             </p>
           </div>

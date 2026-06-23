@@ -64,10 +64,11 @@ export const TrustSection = () => {
     <motion.section 
       ref={sectionRef}
       style={{ opacity: sectionOpacity }}
-      className="relative py-20 sm:py-28 overflow-hidden bg-white"
+      className="relative py-20 sm:py-28 overflow-hidden bg-[#0a0a0a]"
+      id="sobre-nos"
     >
       {/* Light edge effect at top - visual separator */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-border/50 pointer-events-none z-[1]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-white/10 pointer-events-none z-[1]" />
       
       {/* Decorative background elements Removidos */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -86,7 +87,7 @@ export const TrustSection = () => {
           className="mx-auto mb-14 max-w-2xl text-center"
         >
           <motion.span
-            className="inline-block mb-4 px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-medium"
+            className="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -96,18 +97,18 @@ export const TrustSection = () => {
           </motion.span>
           
           <motion.h2 
-            className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
+            className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15, duration: 0.4, ease: "easeOut" }}
           >
             A{" "}
-            <span className="text-primary">JJ & Amorim</span>
+            <span className="text-cyan-500">BMF Corretora</span>
             {" "}em números
           </motion.h2>
           <motion.p 
-            className="text-lg text-muted-foreground"
+            className="text-lg text-neutral-400"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -136,37 +137,37 @@ export const TrustSection = () => {
                 delay: index * 0.08,
                 ease: "easeOut"
               }}
-              className="group relative rounded-2xl bg-white border border-[#f0f0f0] p-6 sm:p-8 overflow-hidden hover:shadow-card hover:-translate-y-1 transition-all duration-300"
+              className="group relative rounded-2xl bg-white/5 border border-white/10 p-6 sm:p-8 overflow-hidden hover:border-cyan-500/50 hover:-translate-y-1 transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
             >
               {/* Neutral background that fills on hover */}
               <div 
-                className={`absolute inset-0 bg-[#f8f9fa] opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                className={`absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               />
 
               {/* Icon with neutral background */}
               <div className="mb-5 sm:mb-6 relative">
                 <div 
-                  className={`relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-primary/5 group-hover:bg-primary/10 transition-colors duration-300`}
+                  className={`relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors duration-300`}
                 >
-                  <feature.icon size={26} className="text-primary" />
+                  <feature.icon size={26} className="text-cyan-400" />
                 </div>
               </div>
 
-              <h3 className="relative mb-2 sm:mb-3 text-base sm:text-lg font-semibold text-foreground">
+              <h3 className="relative mb-2 sm:mb-3 text-base sm:text-lg font-semibold text-white">
                 {feature.title}
               </h3>
-              <p className="relative text-sm text-muted-foreground leading-relaxed">
+              <p className="relative text-sm text-neutral-400 leading-relaxed">
                 {feature.description}
               </p>
 
               {/* Subtle border glow on hover */}
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-transparent group-hover:ring-border transition-all duration-300 pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-transparent group-hover:ring-cyan-500/30 transition-all duration-300 pointer-events-none" />
             </motion.div>
           ))}
         </div>
 
         {/* Social Proof Section */}
-        <SocialProof />
+        {/* <SocialProof /> */}
       </motion.div>
     </motion.section>
   );

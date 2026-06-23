@@ -124,7 +124,7 @@ export const InsuranceTypes = () => {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28 bg-[#f5f6f7]">
+    <section id="seguros" className="relative py-16 sm:py-20 lg:py-28 bg-[#0a0a0a]">
       {/* Decorative shapes - Removidos */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
       </div>
@@ -138,15 +138,15 @@ export const InsuranceTypes = () => {
           transition={{ duration: 0.5 }}
           className="container mx-auto mb-8 sm:mb-12 max-w-2xl text-center px-4 sm:px-6"
         >
-          <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-muted-foreground mb-3 sm:mb-4 bg-white border px-3 sm:px-4 py-1.5 rounded-full shadow-sm">
+          <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-cyan-400 mb-3 sm:mb-4 bg-white/5 border border-white/10 px-3 sm:px-4 py-1.5 rounded-full shadow-sm">
             <Sparkles size={14} className="text-primary"/>
             +6 tipos de seguro
           </span>
-          <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-foreground">
+          <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-white">
             Proteção para o que{" "}
-            <span className="text-primary">importa</span>
+            <span className="text-cyan-500">importa</span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">
+          <p className="text-sm sm:text-base lg:text-lg text-neutral-400">
             Escolha a cobertura ideal para cada momento da sua vida
           </p>
         </motion.div>
@@ -174,8 +174,8 @@ export const InsuranceTypes = () => {
           </Button>
 
           {/* Gradient masks */}
-          <div className={`absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-[#f5f6f7] via-[#f5f6f7]/80 to-transparent z-10 pointer-events-none transition-opacity duration-300 ${canScrollLeft ? 'opacity-100' : 'opacity-0'}`} />
-          <div className={`absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-[#f5f6f7] via-[#f5f6f7]/80 to-transparent z-10 pointer-events-none transition-opacity duration-300 ${canScrollRight ? 'opacity-100' : 'opacity-0'}`} />
+          <div className={`absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10 pointer-events-none transition-opacity duration-300 ${canScrollLeft ? 'opacity-100' : 'opacity-0'}`} />
+          <div className={`absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10 pointer-events-none transition-opacity duration-300 ${canScrollRight ? 'opacity-100' : 'opacity-0'}`} />
 
           <div
             ref={scrollRef}
@@ -188,11 +188,7 @@ export const InsuranceTypes = () => {
             {insuranceTypes.map((insurance, index) => (
               <div
                 key={index}
-                className={`group relative flex-shrink-0 snap-center flex flex-col items-center rounded-3xl bg-white border border-[#f0f0f0] p-6 sm:p-8 cursor-pointer min-w-[220px] sm:min-w-[240px] lg:min-w-[260px] hover:-translate-y-1.5 transition-all duration-400 ease-out ${
-                  insurance.featured 
-                    ? 'shadow-elevated ring-1 ring-border' 
-                    : 'shadow-card hover:shadow-elevated'
-                }`}
+                className={`group relative flex-shrink-0 snap-center flex flex-col items-center rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 cursor-pointer min-w-[220px] sm:min-w-[240px] lg:min-w-[260px] hover:-translate-y-1.5 transition-all duration-400 ease-out hover:border-cyan-500/50 shadow-sm hover:shadow-[0_0_15px_rgba(0,0,0,0.5)]`}
               >
                 {/* Featured badge */}
                 {insurance.featured && (
@@ -202,20 +198,20 @@ export const InsuranceTypes = () => {
                 )}
                 
                 <div className="relative z-10 w-full">
-                  <div className={`mb-4 sm:mb-5 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl mx-auto bg-[#f8f9fa] group-hover:bg-muted transition-colors duration-300`}>
-                    <insurance.icon size={28} className="text-primary" />
+                  <div className={`mb-4 sm:mb-5 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl mx-auto bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors duration-300`}>
+                    <insurance.icon size={28} className="text-cyan-400" />
                   </div>
-                  <h3 className="mb-1.5 sm:mb-2 text-base sm:text-lg font-semibold text-foreground text-center">
+                  <h3 className="mb-1.5 sm:mb-2 text-base sm:text-lg font-semibold text-white text-center">
                     {insurance.title}
                   </h3>
-                  <p className="text-center text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-5 leading-relaxed min-h-[36px] sm:min-h-[40px]">
+                  <p className="text-center text-xs sm:text-sm text-neutral-400 mb-4 sm:mb-5 leading-relaxed min-h-[36px] sm:min-h-[40px]">
                     {insurance.description}
                   </p>
                   
                   {/* CTA button */}
                   <Link 
                     to={`/cotacao?type=${insurance.type}`}
-                    className="w-full flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 py-2 sm:py-2.5 px-3 sm:px-4 rounded-xl transition-colors duration-200"
+                    className="w-full flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-white bg-cyan-600 hover:bg-cyan-500 py-2 sm:py-2.5 px-3 sm:px-4 rounded-xl transition-colors duration-200"
                   >
                     <span>Fazer cotação</span>
                     <ArrowRight size={14} />

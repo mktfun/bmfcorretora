@@ -78,9 +78,9 @@ export const BMFHeroSection = () => {
 
         <div className="hidden lg:flex items-center gap-8 bg-white/5 backdrop-blur-lg border border-white/10 px-8 py-3 rounded-full shadow-glow">
           <Link to="/seguros" className="text-white/90 hover:text-cyan-400 transition-colors text-sm font-medium">Seguros</Link>
-          <a href="#consorcios" className="text-white/90 hover:text-cyan-400 transition-colors text-sm font-medium">Consórcios</a>
-          <a href="#vida" className="text-white/90 hover:text-cyan-400 transition-colors text-sm font-medium">Planos de Vida</a>
-          <a href="#sobre" className="text-white/90 hover:text-cyan-400 transition-colors text-sm font-medium">Sobre Nós</a>
+          <a href="/#seguros" className="text-white/90 hover:text-cyan-400 transition-colors text-sm font-medium">Consórcios</a>
+          <a href="/#seguros" className="text-white/90 hover:text-cyan-400 transition-colors text-sm font-medium">Planos de Vida</a>
+          <a href="/#sobre-nos" className="text-white/90 hover:text-cyan-400 transition-colors text-sm font-medium">Sobre Nós</a>
         </div>
 
         <div>

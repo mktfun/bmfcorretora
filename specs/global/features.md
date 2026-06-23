@@ -7,4 +7,5 @@ Este arquivo centraliza os componentes e funcionalidades existentes para garanti
 
 ## Features
 - **Lithos Hero (Arquivado)**: Landing page full-screen antiga.
-- **BMF Hero (Planejado)**: Landing page corporativa escura com gradientes ciano/azul e mecânica de spotlight reveal voltada para alta conversão institucional.
+- **BMF Hero (Concluído)**: Landing page corporativa escura com gradientes ciano/azul.
+- **BMF Dark Theme Expansion (Planejado)**: Varredura de marca legada (JJ & Amorim) e conversão de todas as seções inferiores (Trust, Seguros, Footer) para o padrão Dark Premium da BMF.

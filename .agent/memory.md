@@ -10,3 +10,4 @@
 
 ## Persona do Usuário
 - Valoriza experiências visuais de alto nível e estética corporativa limpa (ex: Dark theme com Ciano para a BMF). Exige que as partes visuais não quebrem as amarrações do negócio (links para Wizards de cotação devem estar 100% funcionais nas LPs).
+- Aversão total a marcas/textos legados (JJ & Amorim) e ao "Efeito Cortina" (fundo claro/branco subindo sobre fundo escuro). Para a BMF Corretora, toda a aplicação deve transicionar suavemente em um ecossistema Dark Premium (tons de `#0a0a0a`, `#111`, com acentos em `cyan-400/500`).
