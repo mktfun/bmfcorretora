@@ -106,9 +106,12 @@ export const InsuranceTypes = () => {
     if (ref) {
       ref.addEventListener('scroll', checkScroll);
       window.addEventListener('resize', checkScroll);
+      // Restore scroll state when returning to tab/component
+      window.addEventListener('focus', checkScroll);
       return () => {
         ref.removeEventListener('scroll', checkScroll);
         window.removeEventListener('resize', checkScroll);
+        window.removeEventListener('focus', checkScroll);
       };
     }
   }, []);
@@ -159,18 +162,18 @@ export const InsuranceTypes = () => {
             size="icon"
             onClick={() => scroll('left')}
             disabled={!canScrollLeft}
-            className={`hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full bg-white border border-slate-200 shadow-md hover:bg-slate-50 hover:shadow-lg transition-all duration-300 ${!canScrollLeft ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+            className={`hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full bg-[#1a1a1a] border border-white/10 shadow-md hover:bg-[#222] hover:border-white/20 hover:shadow-lg transition-all duration-300 ${!canScrollLeft ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
           >
-            <ChevronLeft size={24} className="text-foreground" />
+            <ChevronLeft size={24} className="text-white" />
           </Button>
           <Button
             variant="ghost"
             size="icon"
             onClick={() => scroll('right')}
             disabled={!canScrollRight}
-            className={`hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full bg-white border border-slate-200 shadow-md hover:bg-slate-50 hover:shadow-lg transition-all duration-300 ${!canScrollRight ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+            className={`hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full bg-[#1a1a1a] border border-white/10 shadow-md hover:bg-[#222] hover:border-white/20 hover:shadow-lg transition-all duration-300 ${!canScrollRight ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
           >
-            <ChevronRight size={24} className="text-foreground" />
+            <ChevronRight size={24} className="text-white" />
           </Button>
 
           {/* Gradient masks */}
@@ -229,13 +232,13 @@ export const InsuranceTypes = () => {
                   key={index}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     index === activeIndex 
-                      ? 'w-5 sm:w-6 bg-primary' 
-                      : 'w-1.5 bg-slate-300'
+                      ? 'w-5 sm:w-6 bg-cyan-400' 
+                      : 'w-1.5 bg-white/20'
                   }`}
                 />
               ))}
             </div>
-            <span className="text-[10px] sm:text-xs text-muted-foreground ml-2">
+            <span className="text-[10px] sm:text-xs text-neutral-400 ml-2">
               Deslize para ver mais
             </span>
           </div>

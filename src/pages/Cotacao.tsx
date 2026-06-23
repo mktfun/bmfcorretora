@@ -119,7 +119,7 @@ const DealTypeSelector: React.FC<DealTypeSelectorProps> = ({ onSelect, insurance
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-          {/* Renovação JJ Seguros */}
+          {/* Renovação BMF Corretora */}
           <button
             type="button"
             onClick={() => onSelect("renovacao")}

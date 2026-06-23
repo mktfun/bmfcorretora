@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import baseBg from '@/assets/images/bmf-base-bg.png';
+import revealBg from '@/assets/images/bmf-reveal-bg.png';
 
 const SPOTLIGHT_R = 260;
 
@@ -47,7 +49,7 @@ export const BMFHeroSection = () => {
       {/* Imagem Base Escura (Z-10) */}
       <div className="absolute inset-0 z-10 hero-zoom">
         <img 
-          src="/src/assets/images/bmf-base-bg.png" 
+          src={baseBg}
           alt="Corporate Dark Architecture" 
           className="w-full h-full object-cover opacity-90"
         />
@@ -60,7 +62,7 @@ export const BMFHeroSection = () => {
         style={{ WebkitMaskRepeat: 'no-repeat', maskRepeat: 'no-repeat' }}
       >
         <img 
-          src="/src/assets/images/bmf-reveal-bg.png" 
+          src={revealBg}
           alt="Revealed Cyan Architecture" 
           className="w-full h-full object-cover"
         />

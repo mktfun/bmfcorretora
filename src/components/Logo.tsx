@@ -52,9 +52,9 @@ export const Logo = ({
       <span className={cn(
         "font-sans font-bold tracking-tight", 
         sizes[size].text, 
-        variant === "light" ? "text-primary-foreground" : "text-foreground"
+        "text-white"
       )}>
-        BMF <span className="font-light tracking-wide opacity-80 text-cyan-400 text-sm">Corretora</span>
+        BMF <span className="font-light tracking-wide opacity-70 text-cyan-400 text-sm">Corretora</span>
       </span>
     </div>
   );
