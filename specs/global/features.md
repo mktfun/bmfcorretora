@@ -6,4 +6,5 @@ Este arquivo centraliza os componentes e funcionalidades existentes para garanti
 - N/A
 
 ## Features
-- **Lithos Hero (Planejado)**: Landing page full-screen com spotlight reveal interativo.
+- **Lithos Hero (Arquivado)**: Landing page full-screen antiga.
+- **BMF Hero (Planejado)**: Landing page corporativa escura com gradientes ciano/azul e mecânica de spotlight reveal voltada para alta conversão institucional.

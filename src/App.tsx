@@ -1,40 +1,66 @@
-import React from 'react';
-import { HeroNavigation } from './components/HeroNavigation';
-import { HeroContent } from './components/HeroContent';
-import { RevealLayer } from './components/RevealLayer';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ScrollToTop } from "./components/ScrollToTop";
+import { CookieConsent } from "./components/CookieConsent";
+import { AuthProvider } from "./hooks/useAuth";
+import { useMetaPixelInit } from "./hooks/useMetaPixelInit";
+import Index from "./pages/Index";
+import Cotacao from "./pages/Cotacao";
+import InsuranceHub from "./pages/InsuranceHub";
+import Success from "./pages/Success";
+import Links from "./pages/Links";
+import NotFound from "./pages/NotFound";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminLeads from "./pages/admin/AdminLeads";
+import AdminLogs from "./pages/admin/AdminLogs";
+import AdminConfig from "./pages/admin/AdminConfig";
+import AdminLeadDetail from "./pages/admin/AdminLeadDetail";
 
-const BG_IMAGE_1 = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_195923_b0ba8ace-1d1d-4f2c-9a28-1ab84b330680.png&w=1280&q=85";
-const BG_IMAGE_2 = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_201152_bba90a12-bf12-459f-91f0-51f237dbaf3b.png&w=1280&q=85";
+const queryClient = new QueryClient();
 
-function App() {
+// Componente interno que usa hooks
+const AppContent = () => {
+  // Inicializar Meta Pixel a partir das configurações do banco
+  useMetaPixelInit();
+
   return (
-    <div className="min-h-screen bg-white tracking-[-0.02em] font-sans">
-      <section className="relative w-full overflow-hidden h-screen bg-black" style={{ height: '100dvh' }}>
-        
-        {/* Base Image (z-10) with slow zoom */}
-        <div className="absolute inset-0 z-10 hero-zoom">
-          <img 
-            src={BG_IMAGE_1} 
-            alt="Base background" 
-            className="w-full h-full object-cover opacity-90"
-          />
-        </div>
-
-        {/* Reveal Layer (z-30) */}
-        <RevealLayer image={BG_IMAGE_2} />
-
-        {/* Shadow overlay to improve text readability */}
-        <div className="absolute inset-0 z-40 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none" />
-
-        {/* Navigation (z-100) */}
-        <HeroNavigation />
-
-        {/* Foreground Content (z-50) */}
-        <HeroContent />
-
-      </section>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/seguros" element={<InsuranceHub />} />
+          <Route path="/cotacao" element={<Cotacao />} />
+          <Route path="/sucesso" element={<Success />} />
+          <Route path="/links" element={<Links />} />
+          {/* Admin Routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/leads" element={<AdminLeads />} />
+          <Route path="/admin/leads/:id" element={<AdminLeadDetail />} />
+          <Route path="/admin/logs" element={<AdminLogs />} />
+          <Route path="/admin/config" element={<AdminConfig />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <CookieConsent />
+      </AuthProvider>
+    </BrowserRouter>
   );
-}
+};
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <AppContent />
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
