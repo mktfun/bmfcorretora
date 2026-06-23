@@ -70,7 +70,7 @@ export default function AdminLogin() {
           <div className="mx-auto">
             <img 
               src={logoImg} 
-              alt="JJ Seguros" 
+              alt="BMF Corretora" 
               className="h-12 w-auto mx-auto"
             />
           </div>

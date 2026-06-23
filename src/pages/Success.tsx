@@ -170,14 +170,14 @@ const Success = () => {
               </button>
             </div>
 
-            {/* Link institucional - Texto simples */}
-            <button
-              onClick={() => window.open("https://jjamorimseguros.com.br", "_blank")}
-              className="w-full py-2 text-sm text-muted-foreground hover:text-primary transition-colors flex items-center justify-center gap-1.5"
+            <Button 
+              variant="outline" 
+              className="w-full gap-2 rounded-xl"
+              onClick={() => window.open("https://bmfcorretora.com.br", "_blank")}
             >
-              <ExternalLink className="w-3.5 h-3.5" />
-              Site Institucional
-            </button>
+              <Globe size={18} />
+              Acessar site
+            </Button>
           </motion.div>
         </motion.div>
       </main>

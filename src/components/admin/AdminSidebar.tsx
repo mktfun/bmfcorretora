@@ -48,7 +48,7 @@ export function AdminSidebar() {
         <div className="flex items-center gap-3">
           <img 
             src={logoImg} 
-            alt="JJ Seguros" 
+            alt="BMF Corretora" 
             className="h-8 w-auto"
           />
           {!collapsed && (

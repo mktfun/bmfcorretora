@@ -43,18 +43,18 @@ export const Logo = ({
   return (
     <div className={cn("flex items-center", sizes[size].gap, className)}>
       <img 
-        alt="Corretora JJ" 
+        alt="BMF Corretora" 
         width={sizes[size].icon} 
         height={sizes[size].icon} 
         className={cn("object-contain", rounded && "rounded-lg")} 
         src={logoSrc} 
       />
       <span className={cn(
-        "font-bold tracking-tight", 
+        "font-sans font-bold tracking-tight", 
         sizes[size].text, 
         variant === "light" ? "text-primary-foreground" : "text-foreground"
       )}>
-        JJ <span className={variant === "light" ? "text-secondary" : "text-secondary"}>&</span> Amorim
+        BMF <span className="font-light tracking-wide opacity-80 text-cyan-400 text-sm">Corretora</span>
       </span>
     </div>
   );

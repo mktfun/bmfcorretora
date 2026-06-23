@@ -36,7 +36,7 @@ export const LegalModals = ({
               <section>
                 <h3 className="font-semibold text-foreground mb-2">1. Aceitação dos Termos</h3>
                 <p>
-                  Ao utilizar os serviços da JJ Seguros, você concorda com estes Termos de Uso. 
+                  Ao utilizar os serviços da BMF Corretora, você concorda com estes Termos de Uso. 
                   Se você não concordar com qualquer parte destes termos, não utilize nossos serviços.
                 </p>
               </section>
@@ -44,7 +44,7 @@ export const LegalModals = ({
               <section>
                 <h3 className="font-semibold text-foreground mb-2">2. Serviços Oferecidos</h3>
                 <p>
-                  A JJ Seguros atua como corretora de seguros, intermediando a contratação de 
+                  A BMF Corretora atua como corretora de seguros, intermediando a contratação de 
                   seguros entre você e as seguradoras parceiras. Nosso papel é apresentar as 
                   melhores opções de acordo com seu perfil e necessidades.
                 </p>
@@ -62,7 +62,7 @@ export const LegalModals = ({
               <section>
                 <h3 className="font-semibold text-foreground mb-2">4. Responsabilidades</h3>
                 <p>
-                  A JJ Seguros não se responsabiliza por decisões de aceitação ou recusa de 
+                  A BMF Corretora não se responsabiliza por decisões de aceitação ou recusa de 
                   propostas pelas seguradoras, que são de exclusiva competência destas.
                 </p>
               </section>
@@ -71,7 +71,7 @@ export const LegalModals = ({
                 <h3 className="font-semibold text-foreground mb-2">5. Propriedade Intelectual</h3>
                 <p>
                   Todo o conteúdo deste site, incluindo textos, imagens, logos e design, 
-                  é de propriedade da JJ Seguros e está protegido por leis de direitos autorais.
+                  é de propriedade da BMF Corretora e está protegido por leis de direitos autorais.
                 </p>
               </section>
 

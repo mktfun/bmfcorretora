@@ -461,7 +461,7 @@ export default function AdminConfig() {
       ...payload,
       cf_qar_respondido: payload.cf_qar_auto || payload.cf_qar_residencial || payload.cf_qar_vida || payload.cf_qar_empresarial || payload.cf_qar_viagem || payload.cf_qar_saude,
       timestamp,
-      source: 'JJ Seguros - Teste Admin Panel',
+      source: 'BMF Corretora - Teste Admin Panel',
     };
   };
 

@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({ minimal = false }: { minimal?: boolean }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -73,58 +73,62 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link
-            to="/seguros"
-            className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
-          >
-            Seguros
-          </Link>
-          <a
-            href="/#seguros"
-            className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
-          >
-            Consórcios
-          </a>
-          <a
-            href="/#seguros"
-            className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
-          >
-            Planos de Vida
-          </a>
-          <a
-            href="/#sobre-nos"
-            className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
-          >
-            Sobre Nós
-          </a>
-          <a
-            href="tel:+5511947645967"
-            className="flex items-center gap-2 text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
-          >
-            <Phone size={16} />
-            <span>(11) 94764-5967</span>
-          </a>
-          <Button variant="cta" size="sm" className="rounded-full bg-cyan-600 hover:bg-cyan-500 text-white" asChild>
-            <Link to="/cotacao">Solicitar Cotação</Link>
-          </Button>
-        </div>
+        {!minimal && (
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              to="/seguros"
+              className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
+            >
+              Seguros
+            </Link>
+            <Link
+              to="/consorcios"
+              className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
+            >
+              Consórcios
+            </Link>
+            <Link
+              to="/planos-de-vida"
+              className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
+            >
+              Planos de Vida
+            </Link>
+            <Link
+              to="/sobre-nos"
+              className="text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
+            >
+              Sobre Nós
+            </Link>
+            <a
+              href="tel:+5511947645967"
+              className="flex items-center gap-2 text-sm text-neutral-300 hover:text-cyan-400 transition-colors"
+            >
+              <Phone size={16} />
+              <span>(11) 94764-5967</span>
+            </a>
+            <Button variant="cta" size="sm" className="rounded-full bg-cyan-600 hover:bg-cyan-500 text-white" asChild>
+              <Link to="/cotacao">Solicitar Cotação</Link>
+            </Button>
+          </div>
+        )}
 
         {/* Mobile Menu Toggle */}
-        <div className="flex md:hidden items-center">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="h-9 w-9"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </Button>
-        </div>
+        {!minimal && (
+          <div className="flex md:hidden items-center">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-9 w-9"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </Button>
+          </div>
+        )}
       </motion.nav>
 
       {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
+      {!minimal && isMobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -139,27 +143,27 @@ export const Header = () => {
             >
               Seguros
             </Link>
-            <a
-              href="/#seguros"
+            <Link
+              to="/consorcios"
               className="block px-4 py-3 text-sm font-medium text-white hover:bg-white/5 rounded-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Consórcios
-            </a>
-            <a
-              href="/#seguros"
+            </Link>
+            <Link
+              to="/planos-de-vida"
               className="block px-4 py-3 text-sm font-medium text-white hover:bg-white/5 rounded-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Planos de Vida
-            </a>
-            <a
-              href="/#sobre-nos"
+            </Link>
+            <Link
+              to="/sobre-nos"
               className="block px-4 py-3 text-sm font-medium text-white hover:bg-white/5 rounded-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Sobre Nós
-            </a>
+            </Link>
             <a
               href="tel:+5511947645967"
               className="flex items-center gap-2 px-4 py-3 text-sm text-neutral-400 hover:bg-white/5 rounded-xl transition-colors"

@@ -13,6 +13,9 @@ import InsuranceHub from "./pages/InsuranceHub";
 import Success from "./pages/Success";
 import Links from "./pages/Links";
 import NotFound from "./pages/NotFound";
+import Consorcios from "./pages/Consorcios";
+import PlanosDeVida from "./pages/PlanosDeVida";
+import SobreNos from "./pages/SobreNos";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminLeads from "./pages/admin/AdminLeads";
@@ -34,6 +37,9 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/seguros" element={<InsuranceHub />} />
+          <Route path="/consorcios" element={<Consorcios />} />
+          <Route path="/planos-de-vida" element={<PlanosDeVida />} />
+          <Route path="/sobre-nos" element={<SobreNos />} />
           <Route path="/cotacao" element={<Cotacao />} />
           <Route path="/sucesso" element={<Success />} />
           <Route path="/links" element={<Links />} />
