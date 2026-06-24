@@ -43,6 +43,8 @@
 - **Badge/pill de seção**: Sempre `bg-white/5 border border-cyan-500/20 px-4 py-1.5 rounded-full text-cyan-400 text-sm` — não apenas `bg-cyan-500/10` sem border.
 - **Cards de feature (nas páginas internas)**: `bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-cyan-500/40 hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_0_24px_rgba(6,182,212,0.08)]`. Títulos dos cards em `font-playfair italic`.
 - **CTA principal das páginas**: `bg-gradient-to-r from-[#003B5C] to-[#00A9E0] hover:from-[#002A42] hover:to-[#008CBA] text-white rounded-full px-10 py-4 font-semibold hover:scale-[1.02] active:scale-95 shadow-2xl shadow-cyan-900/30`.
+- **Inputs Nativos (Date/Time)**: Sempre force a classe `[color-scheme:dark]` em inputs nativos de formulários (como no `<FormInput type="date" />`) para evitar que o navegador renderize o date picker do sistema na cor branca.
+- **Logo Component**: O componente `<Logo />` aceita a propriedade `textOnly={true}`. Ela **deve** ser utilizada no `Header.tsx` e em páginas internas para omitir o PNG antigo, mantendo apenas a tipografia "BMF Corretora" de acordo com o padrão Lithos.
 
 ## Header Global (Header.tsx) — Arquitetura Lithos
 
