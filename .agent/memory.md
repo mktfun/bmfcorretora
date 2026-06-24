@@ -34,3 +34,26 @@
 - **npm não está no PATH** do terminal do agente. Usar sempre: `& 'C:\Program Files\nodejs\npm.cmd' run build` ou invocar o node diretamente.
 - **bun.lock** presente no projeto mas bun também não está disponível no agente. O build real acontece na plataforma Lovable (Netlify/Vercel-like) ao fazer push para o GitHub.
 - **git disponível** em `C:\Program Files\Git\cmd\git.exe`. Usar sempre com `& 'C:\Program Files\Git\cmd\git.exe'` no PowerShell.
+
+## Padrão Lithos (Design Language BMF)
+
+- **Tipografia obrigatória nas pages**: `h1` e `h2` sempre com a primeira palavra/bloco em `font-playfair italic text-white/95`, seguida de texto sans-serif regular. Ex: `<span className="font-playfair italic">Proteção</span>{" "}para o que importa`.
+- **Ease premium**: Usar `ease: [0.16, 1, 0.3, 1]` (cubic-bezier de entrada suave) em todas as animações Framer Motion de entrada (`animate`). Duração mínima `0.6s`.
+- **Radial glow de fundo**: Cada página interna deve ter um `div.fixed.inset-0.pointer-events-none.z-0` com `div.absolute` contendo `bg-cyan-500/5 rounded-full blur-[120px]` centralizado no topo. Cria coerência visual com o Hero.
+- **Badge/pill de seção**: Sempre `bg-white/5 border border-cyan-500/20 px-4 py-1.5 rounded-full text-cyan-400 text-sm` — não apenas `bg-cyan-500/10` sem border.
+- **Cards de feature (nas páginas internas)**: `bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-cyan-500/40 hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_0_24px_rgba(6,182,212,0.08)]`. Títulos dos cards em `font-playfair italic`.
+- **CTA principal das páginas**: `bg-gradient-to-r from-[#003B5C] to-[#00A9E0] hover:from-[#002A42] hover:to-[#008CBA] text-white rounded-full px-10 py-4 font-semibold hover:scale-[1.02] active:scale-95 shadow-2xl shadow-cyan-900/30`.
+
+## Header Global (Header.tsx) — Arquitetura Lithos
+
+- **Estrutura 3 colunas (Desktop)**: Logo (esquerda) | Pílula nav glassmorphism (centro) | WhatsApp CTA pill (direita).
+- **Pílula nav**: `bg-white/10 backdrop-blur-md border border-white/15 px-8 py-3 rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.3)]`.
+- **WhatsApp CTA**: `bg-white/10 hover:bg-white/15 px-5 py-2.5 rounded-full border border-white/20 hover:border-cyan-500/50 backdrop-blur-sm` com ícone SVG inline do WhatsApp.
+- **Mobile**: Header fixo com `bg-black/60 backdrop-blur-md border-b border-white/5`. Drawer dark `bg-[#0d0d0d]/95 backdrop-blur-xl rounded-2xl border border-white/10`.
+- **`minimal={true}`**: Continua obrigatório em `/cotacao` e wizard pages — oculta a nav central e mantém apenas o Logo.
+
+## BMFHeroSection.tsx — Regra de Preservação
+
+- **NUNCA modificar** `BMFHeroSection.tsx` nem a nav interna do Hero da página principal (Index.tsx). O Hero é o padrão de referência — todas as outras páginas devem seguir **ele**, não o contrário.
+- A navegação do Hero tem sua própria implementação independente com o spotlight effect. O `Header.tsx` global é usado apenas nas páginas internas (não na Home).
+
