@@ -12,17 +12,17 @@ const FormCard = ({ children, title, description, className }: FormCardProps) =>
   return (
     <div
       className={cn(
-        "rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 shadow-xl shadow-slate-900/5",
+        "rounded-2xl bg-[#111]/80 border border-white/10 backdrop-blur-sm p-6 sm:p-8 shadow-[0_0_40px_rgba(0,0,0,0.5)]",
         className
       )}
     >
       {(title || description) && (
-        <div className="mb-6 pb-4 border-b border-slate-100">
+        <div className="mb-6 pb-4 border-b border-white/10">
           {title && (
-            <h3 className="text-xl font-semibold text-foreground">{title}</h3>
+            <h3 className="text-xl font-semibold text-white">{title}</h3>
           )}
           {description && (
-            <p className="text-sm text-muted-foreground mt-1">{description}</p>
+            <p className="text-sm text-neutral-400 mt-1">{description}</p>
           )}
         </div>
       )}

@@ -20,22 +20,22 @@ export const LgpdConsent = ({
 
   return (
     <>
-      <div className="space-y-4 p-4 bg-muted/50 rounded-lg border border-border">
+      <div className="space-y-4 p-4 bg-white/5 rounded-lg border border-white/10">
         <div className="flex items-start gap-3">
           <Checkbox
             id="terms"
             checked={acceptedTerms}
             onCheckedChange={(checked) => onAcceptTermsChange(checked === true)}
-            className="mt-0.5"
+            className="mt-0.5 border-white/20 data-[state=checked]:bg-cyan-500 data-[state=checked]:border-cyan-500"
           />
           <div className="space-y-1">
-            <label htmlFor="terms" className="text-sm font-medium leading-tight cursor-pointer">
+            <label htmlFor="terms" className="text-sm font-medium leading-tight cursor-pointer text-neutral-300">
               Confirmo que os dados informados são verdadeiros e corretos.
             </label>
             <button
               type="button"
               onClick={() => setShowTerms(true)}
-              className="text-xs text-primary hover:underline block"
+              className="text-xs text-cyan-400 hover:underline block"
             >
               Ver Termos de Uso
             </button>
@@ -47,16 +47,16 @@ export const LgpdConsent = ({
             id="privacy"
             checked={acceptedPrivacy}
             onCheckedChange={(checked) => onAcceptPrivacyChange(checked === true)}
-            className="mt-0.5"
+            className="mt-0.5 border-white/20 data-[state=checked]:bg-cyan-500 data-[state=checked]:border-cyan-500"
           />
           <div className="space-y-1">
-            <label htmlFor="privacy" className="text-sm font-medium leading-tight cursor-pointer">
+            <label htmlFor="privacy" className="text-sm font-medium leading-tight cursor-pointer text-neutral-300">
               Autorizo o uso dos meus dados para fins de cotação de seguros, conforme a Lei Geral de Proteção de Dados (LGPD).
             </label>
             <button
               type="button"
               onClick={() => setShowPrivacy(true)}
-              className="text-xs text-primary hover:underline block"
+              className="text-xs text-cyan-400 hover:underline block"
             >
               Ver Política de Privacidade
             </button>

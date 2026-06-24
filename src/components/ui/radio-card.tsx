@@ -29,16 +29,15 @@ const RadioCardGroup = ({
   return (
     <div className={cn("w-full space-y-2", className)}>
       {label && (
-        <label className="block text-sm font-medium text-foreground">
+        <label className="block text-sm font-medium text-neutral-300">
           {label}
         </label>
       )}
       <div
         className={cn(
           "grid gap-3",
-          // Mobile: 1 column, then responsive breakpoints
-          columns === 2 
-            ? "grid-cols-1 sm:grid-cols-2" 
+          columns === 2
+            ? "grid-cols-1 sm:grid-cols-2"
             : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         )}
       >
@@ -50,20 +49,18 @@ const RadioCardGroup = ({
               type="button"
               onClick={() => onChange(option.value)}
               className={cn(
-                // Base styles - Mobile first with adequate touch target
-                "relative flex flex-col items-start p-4 rounded-xl border-2 transition-all duration-200",
-                "min-h-[60px] text-left shadow-sm",
-                "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-secondary/15 focus-visible:ring-offset-0",
-                // State-based styling - obvious selection state
+                "relative flex flex-col items-start p-4 rounded-xl border transition-all duration-200",
+                "min-h-[60px] text-left",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/30 focus-visible:ring-offset-0",
                 isSelected
-                  ? "border-secondary bg-secondary/10 shadow-md"
-                  : "border-border bg-card hover:border-secondary/40 hover:bg-secondary/5 hover:shadow-md"
+                  ? "border-cyan-500/50 bg-cyan-500/10 shadow-[0_0_12px_rgba(6,182,212,0.1)]"
+                  : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/8"
               )}
             >
               {/* Selected indicator */}
               {isSelected && (
-                <div className="absolute top-2 right-2 h-5 w-5 rounded-full bg-secondary flex items-center justify-center">
-                  <Check className="h-3 w-3 text-secondary-foreground" />
+                <div className="absolute top-2 right-2 h-5 w-5 rounded-full bg-cyan-500 flex items-center justify-center">
+                  <Check className="h-3 w-3 text-black" />
                 </div>
               )}
               {/* Icon */}
@@ -71,7 +68,7 @@ const RadioCardGroup = ({
                 <div
                   className={cn(
                     "mb-2 transition-colors",
-                    isSelected ? "text-secondary" : "text-muted-foreground"
+                    isSelected ? "text-cyan-400" : "text-neutral-400"
                   )}
                 >
                   {option.icon}
@@ -81,14 +78,14 @@ const RadioCardGroup = ({
               <span
                 className={cn(
                   "text-sm font-semibold transition-colors",
-                  isSelected ? "text-foreground" : "text-foreground"
+                  isSelected ? "text-white" : "text-neutral-300"
                 )}
               >
                 {option.label}
               </span>
               {/* Description */}
               {option.description && (
-                <span className="text-xs text-muted-foreground mt-0.5">
+                <span className="text-xs text-neutral-500 mt-0.5">
                   {option.description}
                 </span>
               )}

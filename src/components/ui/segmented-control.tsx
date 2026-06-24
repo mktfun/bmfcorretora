@@ -26,11 +26,11 @@ const SegmentedControl = ({
   return (
     <div className={cn("w-full space-y-2", className)}>
       {label && (
-        <label className="block text-sm font-medium text-foreground">
+        <label className="block text-sm font-medium text-neutral-300">
           {label}
         </label>
       )}
-      <div className="relative flex rounded-xl bg-slate-200 p-1.5 gap-1">
+      <div className="relative flex rounded-xl bg-white/5 border border-white/10 p-1.5 gap-1">
         {options.map((option) => {
           const isSelected = value === option.value;
           return (
@@ -40,16 +40,16 @@ const SegmentedControl = ({
               onClick={() => onChange(option.value)}
               className={cn(
                 "relative flex-1 px-4 py-3 min-h-[44px] rounded-lg text-sm transition-all duration-200 z-10",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/50 focus-visible:ring-offset-0",
                 isSelected
-                  ? "text-primary font-semibold"
-                  : "text-slate-500 hover:text-slate-700 font-medium"
+                  ? "text-white font-semibold"
+                  : "text-neutral-500 hover:text-neutral-300 font-medium"
               )}
             >
               {isSelected && (
                 <motion.div
                   layoutId="segmented-active"
-                  className="absolute inset-0 bg-white rounded-lg shadow-md"
+                  className="absolute inset-0 bg-cyan-500/15 border border-cyan-500/30 rounded-lg"
                   initial={false}
                   transition={{
                     type: "spring",

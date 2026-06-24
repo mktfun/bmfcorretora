@@ -59,14 +59,14 @@ const OptionCard: React.FC<OptionCardProps> = ({ icon, label, selected, onClick 
   <button
     type="button"
     onClick={onClick}
-    className={`flex flex-col items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-200 gap-2 h-24 ${
+    className={`flex flex-col items-center justify-center p-4 border rounded-xl cursor-pointer transition-all duration-200 gap-2 h-24 ${
       selected
-        ? "border-primary bg-primary/5 text-primary shadow-sm scale-[1.02]"
-        : "border-muted bg-background text-muted-foreground hover:bg-muted/50 hover:border-muted-foreground/30"
+        ? "border-cyan-500/50 bg-cyan-500/10 text-cyan-400 shadow-[0_0_12px_rgba(6,182,212,0.1)] scale-[1.02]"
+        : "border-white/10 bg-white/5 text-neutral-400 hover:bg-white/8 hover:border-white/20"
     }`}
   >
-    <span className={selected ? "text-primary" : "text-muted-foreground"}>{icon}</span>
-    <span className="font-bold text-sm text-center leading-tight">{label}</span>
+    <span className={selected ? "text-cyan-400" : "text-neutral-400"}>{icon}</span>
+    <span className="font-bold text-sm text-center leading-tight text-white">{label}</span>
   </button>
 );
 
