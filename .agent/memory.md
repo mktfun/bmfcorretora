@@ -15,3 +15,22 @@
 ## Padrões Arquiteturais Consolidados
 - **Navegação (MPA vs SPA)**: Evitar ancoragem pesada na mesma página (Efeito Cortina). As grandes categorias (Consórcios, Planos de Vida, Sobre Nós) devem possuir **páginas independentes**, com a Landing Page principal fluindo suavemente via rolagem natural sem fixed/sticky tricks que causem sobreposição rígida.
 - **Header Contextual**: Em funis de conversão (ex: `/cotacao`), o `<Header>` deve sempre ser utilizado com a prop `minimal={true}` para ocultar o menu principal, prevenindo a temida concorrência visual (double header) e garantindo que o usuário foque no preenchimento do wizard.
+
+## Design System Dark Premium (BMF)
+
+- **Paleta obrigatória**: Background `#0a0a0a` / `#111`, cards `bg-[#111]/80`, inputs `bg-[#0d0d0d]`, borders `border-white/10`, texto primário `text-white`, texto secundário `text-neutral-300/400`, acento `text-cyan-400`, hover de acento `text-cyan-300`.
+- **Tokens Tailwind**: NUNCA use tokens semânticos do Shadcn/Tailwind light (`bg-card`, `bg-background`, `border-input`, `text-foreground`, `text-muted-foreground`, `bg-muted`) diretamente nos componentes do funil de cotação. Esses tokens resolvem para branco no tema padrão e criam containers brancos sobre fundo preto — o "bug do container branco" que o usuário reportou. Sempre use valores hardcoded dark.
+- **OptionCard / RadioCard / YesNoToggle**: Estado inativo = `bg-white/5 border-white/10 text-neutral-400`. Estado ativo/selecionado = `bg-cyan-500/10 border-cyan-500/50 text-cyan-400` com shadow ciano suave.
+- **Select (Radix)**: Trigger deve ser `bg-[#0d0d0d] border-white/10 text-white` com focus `border-cyan-500/50`. Content (dropdown) deve ser `bg-[#111] border-white/10` com items `text-neutral-300 hover:bg-white/10`.
+- **Stepper**: Etapa concluída = `border-cyan-400 bg-cyan-400 text-black`. Etapa ativa = `border-cyan-500 bg-cyan-500/10 text-cyan-400`. Etapa inativa = `border-white/20 bg-white/5 text-neutral-500`. Conector = `bg-cyan-500` (concluído) / `bg-white/10` (pendente).
+- **FormCard**: Usar sempre `bg-[#111]/80 border border-white/10 backdrop-blur-sm shadow-[0_0_40px_rgba(0,0,0,0.5)]` — nunca `bg-white`.
+
+## Imports de Assets (Vite)
+
+- **CRÍTICO**: Sempre importar imagens como módulos ES (`import bgImg from "@/assets/images/img.png"`) e nunca usar paths relativos de dev como `src="/src/assets/images/img.png"`. Paths relativos de dev quebram na re-montagem de rota e podem não ser resolvidos em produção.
+
+## Ambiente de Build
+
+- **npm não está no PATH** do terminal do agente. Usar sempre: `& 'C:\Program Files\nodejs\npm.cmd' run build` ou invocar o node diretamente.
+- **bun.lock** presente no projeto mas bun também não está disponível no agente. O build real acontece na plataforma Lovable (Netlify/Vercel-like) ao fazer push para o GitHub.
+- **git disponível** em `C:\Program Files\Git\cmd\git.exe`. Usar sempre com `& 'C:\Program Files\Git\cmd\git.exe'` no PowerShell.
