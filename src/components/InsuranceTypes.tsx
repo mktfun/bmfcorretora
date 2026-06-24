@@ -138,18 +138,18 @@ export const InsuranceTypes = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="container mx-auto mb-8 sm:mb-12 max-w-2xl text-center px-4 sm:px-6"
         >
-          <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-cyan-400 mb-3 sm:mb-4 bg-white/5 border border-white/10 px-3 sm:px-4 py-1.5 rounded-full shadow-sm">
-            <Sparkles size={14} className="text-primary"/>
+          <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-cyan-400 mb-3 sm:mb-5 bg-white/5 border border-white/10 px-3 sm:px-4 py-1.5 rounded-full shadow-sm">
+            <Sparkles size={14} className="text-cyan-400"/>
             +6 tipos de seguro
           </span>
-          <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-white">
-            Proteção para o que{" "}
-            <span className="text-cyan-500">importa</span>
+          <h2 className="mb-3 sm:mb-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
+            <span className="font-playfair italic text-white/95">Proteção</span>{" "}para o que{" "}
+            <span className="text-cyan-400">importa</span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-neutral-400">
+          <p className="text-sm sm:text-base lg:text-lg text-neutral-400 font-light">
             Escolha a cobertura ideal para cada momento da sua vida
           </p>
         </motion.div>

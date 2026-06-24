@@ -288,8 +288,13 @@ const InsuranceTile = ({
 
 const InsuranceHub = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a]">
+    <div className="min-h-screen flex flex-col bg-[#0a0a0a]">
       <Header />
+      
+      {/* Subtle radial glow to echo the hero */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/5 rounded-full blur-[120px]" />
+      </div>
       
       <main className="flex-1 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-24">
         {/* Hero Section */}
@@ -297,8 +302,8 @@ const InsuranceHub = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-4 py-1.5 text-sm font-medium text-cyan-400 mb-4 md:mb-5"
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 px-4 py-1.5 text-sm font-medium text-cyan-400 mb-5 md:mb-6"
           >
             <Shield size={16} />
             <span>Encontre o seguro ideal</span>
@@ -307,17 +312,17 @@ const InsuranceHub = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4"
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-5 leading-[1.08] tracking-tight"
           >
-            Qual proteção você busca hoje?
+            <span className="font-playfair italic text-white/95">Qual proteção</span>{" "}você busca hoje?
           </motion.h1>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto font-light"
           >
             Selecione uma categoria para iniciar sua cotação personalizada
           </motion.p>

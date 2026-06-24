@@ -91,24 +91,24 @@ export const TrustSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.3, ease: "easeOut" }}
+            transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
           >
             Por que nos escolher
           </motion.span>
           
           <motion.h2 
-            className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
+            className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl leading-[1.08]"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.15, duration: 0.4, ease: "easeOut" }}
+            transition={{ delay: 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
             A{" "}
-            <span className="text-cyan-500">BMF Corretora</span>
+            <span className="font-playfair italic">BMF Corretora</span>
             {" "}em números
           </motion.h2>
           <motion.p 
-            className="text-lg text-neutral-400"
+            className="text-lg text-neutral-400 font-light"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
