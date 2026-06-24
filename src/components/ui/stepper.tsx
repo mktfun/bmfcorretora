@@ -35,7 +35,7 @@ const Stepper = ({ steps, currentStep, className }: StepperProps) => {
                       ? "border-cyan-400 bg-cyan-400 text-black"
                       : isCurrent
                       ? "border-cyan-500 bg-cyan-500/10 text-cyan-400"
-                      : "border-white/20 bg-white/5 text-neutral-500"
+                      : "border-white/20 bg-white/5 text-neutral-400"
                   )}
                 >
                   {isCompleted ? (
@@ -51,13 +51,13 @@ const Stepper = ({ steps, currentStep, className }: StepperProps) => {
                       "text-sm font-medium transition-colors",
                       isCurrent || isCompleted
                         ? "text-white"
-                        : "text-neutral-500"
+                        : "text-neutral-400"
                     )}
                   >
                     {step.title}
                   </span>
                   {step.description && (
-                    <span className="text-xs text-neutral-500">
+                    <span className="text-xs text-neutral-400">
                       {step.description}
                     </span>
                   )}

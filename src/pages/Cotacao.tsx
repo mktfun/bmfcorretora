@@ -224,7 +224,13 @@ const Cotacao = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#0a0a0a]">
       <Header minimal={true} />
-      <main className="flex-1 pt-28 sm:pt-32 pb-12">
+      
+      {/* Radial glow */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/5 rounded-full blur-[120px]" />
+      </div>
+
+      <main className="relative z-10 flex-1 pt-28 sm:pt-32 pb-12">
         <div className="container">
           {/* Page Header */}
           <div className="text-center mb-8 sm:mb-12">

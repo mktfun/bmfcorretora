@@ -40,7 +40,7 @@ export const Header = ({ minimal = false }: { minimal?: boolean }) => {
       <div className="hidden md:flex items-center justify-between px-6 py-5">
         {/* Left — Logo */}
         <Link to="/" className="flex-shrink-0">
-          <Logo size="sm" />
+          <Logo size="sm" textOnly />
         </Link>
 
         {/* Center — Pill Nav (only when not minimal) */}
@@ -83,7 +83,7 @@ export const Header = ({ minimal = false }: { minimal?: boolean }) => {
       {/* Mobile Header */}
       <div className="flex md:hidden items-center justify-between px-5 py-4 bg-black/60 backdrop-blur-md border-b border-white/5">
         <Link to="/" className="flex-shrink-0">
-          <Logo size="sm" />
+          <Logo size="sm" textOnly />
         </Link>
 
         {!minimal && (

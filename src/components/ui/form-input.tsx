@@ -38,7 +38,7 @@ const FormInput = React.forwardRef<HTMLInputElement, FormInputProps>(
             inputMode={inputMode}
             className={cn(
               // Base styles - dark premium
-              "flex h-12 w-full rounded-lg border bg-[#0d0d0d] px-4 py-3 text-base text-white",
+              "flex h-12 w-full rounded-lg border bg-[#0d0d0d] px-4 py-3 text-base text-white [color-scheme:dark]",
               "ring-offset-transparent transition-all duration-200",
               "placeholder:text-neutral-600",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0",
