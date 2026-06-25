@@ -33,6 +33,7 @@ import { usePartialLead } from "@/hooks/usePartialLead";
 import { Label } from "@/components/ui/label";
 import { LgpdConsent } from "@/components/ui/lgpd-consent";
 import { YesNoToggle } from "@/components/ui/yes-no-toggle";
+import { MaritalStatusGrid } from "@/components/ui/marital-status-grid";
 
 const steps: Step[] = [
   { id: "personal", title: "Dados Condutor", description: "Quem vai dirigir?" },
@@ -452,19 +453,11 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
               />
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Estado Civil <span className="text-destructive">*</span></label>
-                  <Select value={maritalStatus} onValueChange={setMaritalStatus}>
-                    <SelectTrigger className="bg-background"><SelectValue placeholder="Selecione..." /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="solteiro">Solteiro(a)</SelectItem>
-                      <SelectItem value="casado">Casado(a)</SelectItem>
-                      <SelectItem value="divorciado">Divorciado(a)</SelectItem>
-                      <SelectItem value="viuvo">Viúvo(a)</SelectItem>
-                      <SelectItem value="uniao_estavel">União Estável</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                <MaritalStatusGrid 
+                  value={maritalStatus} 
+                  onChange={setMaritalStatus} 
+                  required 
+                />
                 <FormInput 
                   label="Profissão" 
                   placeholder="Ex: Engenheiro"

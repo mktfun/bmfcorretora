@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 export const Footer = () => {
-  return <footer className="bg-[#0a0a0a] text-white">
+  return <footer className="bg-black text-white/70">
       <div className="container mx-auto px-6 py-12 lg:py-16">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}

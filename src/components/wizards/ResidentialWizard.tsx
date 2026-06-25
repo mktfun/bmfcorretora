@@ -19,6 +19,7 @@ import { toast } from "sonner";
 import { sendToRDStation, buildResidentialPayload } from "@/utils/dataProcessor";
 import { usePartialLead } from "@/hooks/usePartialLead";
 import { LgpdConsent } from "@/components/ui/lgpd-consent";
+import { MaritalStatusGrid } from "@/components/ui/marital-status-grid";
 
 const steps: Step[] = [
   { id: "insured", title: "Dados do Segurado", description: "Informações pessoais" },
@@ -358,23 +359,11 @@ export const ResidentialWizard = () => {
                 required
               />
 
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-foreground">
-                  Estado Civil <span className="text-destructive">*</span>
-                </label>
-                <Select value={maritalStatus} onValueChange={setMaritalStatus}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Selecione..." />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="solteiro">Solteiro(a)</SelectItem>
-                    <SelectItem value="casado">Casado(a)</SelectItem>
-                    <SelectItem value="divorciado">Divorciado(a)</SelectItem>
-                    <SelectItem value="viuvo">Viúvo(a)</SelectItem>
-                    <SelectItem value="uniao_estavel">União Estável</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+              <MaritalStatusGrid 
+                value={maritalStatus} 
+                onChange={setMaritalStatus} 
+                required 
+              />
 
               <FormInput
                 label="Profissão"

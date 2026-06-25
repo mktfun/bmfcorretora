@@ -21,6 +21,7 @@ import { toast } from "sonner";
 import { sendToRDStation, buildEndorsementPayload } from "@/utils/dataProcessor";
 import { usePartialLead } from "@/hooks/usePartialLead";
 import { LgpdConsent } from "@/components/ui/lgpd-consent";
+import { MaritalStatusGrid } from "@/components/ui/marital-status-grid";
 
 // Tipos de endosso disponíveis
 type EndorsementType = "substituicao_veiculo" | "alteracao_cep" | "troca_condutor" | "cancelamento" | null;
@@ -554,21 +555,11 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
                       onChange={(e) => setNewDriverCnh(e.target.value.replace(/\D/g, ""))}
                       inputMode="numeric"
                     />
-                    <div className="space-y-2">
-                      <Label className="text-sm font-medium">Estado Civil (opcional)</Label>
-                      <select
-                        value={newDriverMaritalStatus}
-                        onChange={(e) => setNewDriverMaritalStatus(e.target.value)}
-                        className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm"
-                      >
-                        <option value="">Selecione...</option>
-                        <option value="solteiro">Solteiro(a)</option>
-                        <option value="casado">Casado(a)</option>
-                        <option value="divorciado">Divorciado(a)</option>
-                        <option value="viuvo">Viúvo(a)</option>
-                        <option value="uniao_estavel">União Estável</option>
-                      </select>
-                    </div>
+                    <MaritalStatusGrid 
+                      value={newDriverMaritalStatus} 
+                      onChange={setNewDriverMaritalStatus} 
+                      required={false}
+                    />
                   </div>
                 </div>
               )}

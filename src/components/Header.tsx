@@ -31,7 +31,7 @@ export const Header = ({ minimal = false }: { minimal?: boolean }) => {
 
   return (
     <motion.header
-      className="fixed z-50 left-0 right-0 top-0"
+      className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md border-b border-white/10"
       initial={{ opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}

@@ -5,7 +5,7 @@ import { TrustSection } from "@/components/TrustSection";
 
 const SobreNos = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0a0a0a]">
+    <div className="min-h-screen flex flex-col bg-black">
       <Header />
 
       {/* Radial glow */}

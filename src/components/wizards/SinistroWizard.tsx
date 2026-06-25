@@ -12,6 +12,7 @@ import { toast } from "sonner";
 import { sendToRDStation, buildSinistroPayload } from "@/utils/dataProcessor";
 import { usePartialLead } from "@/hooks/usePartialLead";
 import { LgpdConsent } from "@/components/ui/lgpd-consent";
+import { MaritalStatusGrid } from "@/components/ui/marital-status-grid";
 
 // Formatação helpers
 const formatCPF = (value: string) => value.replace(/\D/g, "").replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d{1,2})/, "$1-$2").replace(/(-\d{2})\d+?$/, "$1");
@@ -294,18 +295,11 @@ export const SinistroWizard: React.FC = () => {
                 inputMode="numeric"
                 required
               />
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Estado Civil *</label>
-                <Select value={driverMaritalStatus} onValueChange={setDriverMaritalStatus}>
-                  <SelectTrigger className="bg-background"><SelectValue placeholder="Selecione..." /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="solteiro">Solteiro(a)</SelectItem>
-                    <SelectItem value="casado">Casado(a) / União Estável</SelectItem>
-                    <SelectItem value="divorciado">Divorciado(a)</SelectItem>
-                    <SelectItem value="viuvo">Viúvo(a)</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+              <MaritalStatusGrid 
+                value={driverMaritalStatus} 
+                onChange={setDriverMaritalStatus} 
+                required 
+              />
               <FormInput
                 label="E-mail *"
                 type="email"
@@ -469,18 +463,11 @@ export const SinistroWizard: React.FC = () => {
                     inputMode="numeric"
                     required
                   />
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Estado Civil *</label>
-                    <Select value={thirdMaritalStatus} onValueChange={setThirdMaritalStatus}>
-                      <SelectTrigger className="bg-background"><SelectValue placeholder="Selecione..." /></SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="solteiro">Solteiro(a)</SelectItem>
-                        <SelectItem value="casado">Casado(a) / União Estável</SelectItem>
-                        <SelectItem value="divorciado">Divorciado(a)</SelectItem>
-                        <SelectItem value="viuvo">Viúvo(a)</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+                  <MaritalStatusGrid 
+                    value={thirdMaritalStatus} 
+                    onChange={setThirdMaritalStatus} 
+                    required 
+                  />
                   <FormInput
                     label="E-mail *"
                     type="email"

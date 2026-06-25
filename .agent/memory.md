@@ -59,3 +59,7 @@
 - **NUNCA modificar** `BMFHeroSection.tsx` nem a nav interna do Hero da página principal (Index.tsx). O Hero é o padrão de referência — todas as outras páginas devem seguir **ele**, não o contrário.
 - A navegação do Hero tem sua própria implementação independente com o spotlight effect. O `Header.tsx` global é usado apenas nas páginas internas (não na Home).
 
+## Padronização Global BMF (Internal Pages)
+- **Background Root**: Todas as páginas internas (Consorcios, PlanosDeVida, SobreNos, InsuranceHub) devem obrigatoriamente ter um wrapper raiz `min-h-screen flex flex-col bg-black`, substituindo tons como `#0a0a0a` para um fundo mais denso onde os glassmorphisms saltam melhor.
+- **Header Global**: O wrapper do Header deve ser `fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md border-b border-white/10` para manter consistência de scroll sobre conteúdos escuros.
+- **Componentes de Grid para Opções Nativas (MaritalStatusGrid)**: Ao invés de usar componentes de `<Select>` padrão que quebram visualmente em dark mode sobre branco, formulários e wizards adotaram layouts Grid Responsivos (`grid-cols-2 md:grid-cols-5`). O estado inativo usa `bg-white/10 text-white` e ativo usa `bg-cyan-600 text-white shadow-[0_0_15px_rgba(6,182,212,0.4)] border border-cyan-400`. Componente encapsulado em `<MaritalStatusGrid />` para padronização.

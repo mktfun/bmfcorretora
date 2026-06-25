@@ -30,7 +30,7 @@ const benefits = [
 
 const Consorcios = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0a0a0a]">
+    <div className="min-h-screen flex flex-col bg-black">
       <Header />
 
       {/* Subtle radial glow */}
