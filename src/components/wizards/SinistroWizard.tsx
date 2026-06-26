@@ -256,6 +256,7 @@ export const SinistroWizard: React.FC = () => {
             <Stepper steps={steps} currentStep={currentStep} />
           </div>
         </div>
+      </div>
 
       {currentStep === 0 && (
         <div className="space-y-6 animate-slide-in">
