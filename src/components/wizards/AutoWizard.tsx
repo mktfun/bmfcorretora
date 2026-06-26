@@ -571,7 +571,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
                     onClick={() => setVehicleUseType("comercial")}
                   />
                 </div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-neutral-400">
                   {vehicleUseType === "comercial" 
                     ? "Inclui visitas a clientes, entregas e motoristas de aplicativo"
                     : "Inclui lazer e ida/volta ao trabalho/faculdade"}
@@ -593,7 +593,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
                 />
                 {isFetchingCep && (
                   <div className="absolute right-3 top-9">
-                    <Loader2 size={18} className="animate-spin text-muted-foreground" />
+                    <Loader2 size={18} className="animate-spin text-neutral-400" />
                   </div>
                 )}
               </div>
@@ -609,7 +609,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
               {/* BLOCO A: Endereço Compacto */}
               <div className="space-y-4">
                 <div className="flex items-center gap-3 pb-2 border-b border-white/10">
-                  <h3 className="font-semibold text-foreground">Endereço</h3>
+                  <h3 className="font-semibold text-white">Endereço</h3>
                   <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-mono rounded-full">
                     {cep}
                   </span>
@@ -662,7 +662,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
 
               {/* BLOCO B: Residência & Garagem */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground pb-2 border-b border-white/10">Residência & Garagem</h3>
+                <h3 className="font-semibold text-white pb-2 border-b border-white/10">Residência & Garagem</h3>
                 
                 <div className="space-y-3">
                   <Label className="text-sm font-medium">Qual seu tipo de residência?</Label>
@@ -729,7 +729,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
               
               {/* BLOCO A: Rotina - Trabalho */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground pb-2 border-b border-white/10 flex items-center gap-2">
+                <h3 className="font-semibold text-white pb-2 border-b border-white/10 flex items-center gap-2">
                   <Briefcase size={18} /> Rotina de Trabalho
                 </h3>
                 
@@ -768,7 +768,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
 
               {/* BLOCO B: Rotina - Faculdade */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground pb-2 border-b border-white/10 flex items-center gap-2">
+                <h3 className="font-semibold text-white pb-2 border-b border-white/10 flex items-center gap-2">
                   <GraduationCap size={18} /> Rotina de Estudo
                 </h3>
                 
@@ -807,7 +807,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
 
               {/* BLOCO C: Condutor Jovem (Lógica Condicional) */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground pb-2 border-b border-white/10 flex items-center gap-2">
+                <h3 className="font-semibold text-white pb-2 border-b border-white/10 flex items-center gap-2">
                   <Users size={18} /> Condutor Jovem
                 </h3>
                 
@@ -870,7 +870,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
               {/* BLOCO D: Sinistro - Apenas para Renovação */}
               {dealType === "renovacao" && (
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-foreground pb-2 border-b border-white/10 flex items-center gap-2">
+                  <h3 className="font-semibold text-white pb-2 border-b border-white/10 flex items-center gap-2">
                     ⚠️ Histórico de Sinistros
                   </h3>
                   
@@ -921,7 +921,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
       </div>
 
       <div className="flex items-center justify-center mt-6 mb-4">
-        <p className="text-xs text-muted-foreground text-center flex items-center gap-1.5">
+        <p className="text-xs text-neutral-400 text-center flex items-center gap-1.5">
           <svg className="w-3.5 h-3.5 text-success" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
           </svg>

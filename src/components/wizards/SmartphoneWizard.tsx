@@ -409,8 +409,8 @@ export const SmartphoneWizard = () => {
                 <div className="flex items-start gap-3">
                   <Smartphone className="text-primary mt-0.5" size={24} />
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Cobertura para Smartphone</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <h4 className="font-semibold text-white mb-1">Cobertura para Smartphone</h4>
+                    <p className="text-sm text-neutral-400">
                       O seguro residencial pode incluir cobertura para eletrônicos portáteis, 
                       protegendo seu smartphone contra roubo, furto e danos acidentais.
                     </p>

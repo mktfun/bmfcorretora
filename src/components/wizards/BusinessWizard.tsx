@@ -380,7 +380,7 @@ export const BusinessWizard = () => {
               />
 
               {isLoadingCep && (
-                <p className="text-sm text-muted-foreground flex items-center gap-2">
+                <p className="text-sm text-neutral-400 flex items-center gap-2">
                   <Loader2 size={14} className="animate-spin" />
                   Buscando endereço...
                 </p>
@@ -536,7 +536,7 @@ export const BusinessWizard = () => {
       </div>
 
       <div className="flex items-center justify-center mt-6 mb-4">
-        <p className="text-xs text-muted-foreground text-center flex items-center gap-1.5">
+        <p className="text-xs text-neutral-400 text-center flex items-center gap-1.5">
           <svg className="w-3.5 h-3.5 text-success" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
           </svg>

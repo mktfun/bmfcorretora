@@ -224,10 +224,10 @@ export const SinistroWizard: React.FC = () => {
     <div className="w-full max-w-2xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
       <div className="bg-white/5 border border-white/10 p-4 rounded-xl mb-6">
         <div className="flex items-start gap-3">
-          <AlertTriangle className="text-foreground/80 shrink-0 mt-0.5" size={20} />
+          <AlertTriangle className="text-white/80 shrink-0 mt-0.5" size={20} />
           <div>
-            <h3 className="font-semibold text-foreground text-sm">Aviso Importante</h3>
-            <p className="text-sm text-muted-foreground mt-1">
+            <h3 className="font-semibold text-white text-sm">Aviso Importante</h3>
+            <p className="text-sm text-neutral-400 mt-1">
               As informações fornecidas devem ser estritamente reais. Qualquer divergência não confirmada pode implicar na negativa da indenização por parte da seguradora.
             </p>
           </div>
@@ -437,8 +437,8 @@ export const SinistroWizard: React.FC = () => {
               {hasThirdParty === "sim" && (
                 <div className="space-y-5 animate-slide-in pt-4 border-t border-white/10 mt-4">
                   <div className="bg-white/5 p-4 rounded-xl flex gap-3 border border-white/10 mb-2">
-                    <FileText className="text-foreground/80 shrink-0 mt-0.5" size={20} />
-                    <p className="text-sm text-muted-foreground">
+                    <FileText className="text-white/80 shrink-0 mt-0.5" size={20} />
+                    <p className="text-sm text-neutral-400">
                       <strong>Atenção:</strong> Será necessário nos enviar a foto do documento do veículo do terceiro e os boletins de ocorrência através do nosso WhatsApp ao fim da solicitação.
                     </p>
                   </div>
@@ -516,22 +516,22 @@ export const SinistroWizard: React.FC = () => {
           <FormCard title="Conclusão e Aceite" description="Confirme os dados para prosseguir com a abertura do sinistro">
             <div className="space-y-6">
               <div className="bg-white/5 border border-white/10 p-4 rounded-lg">
-                <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Resumo da Solicitação</h4>
+                <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Resumo da Solicitação</h4>
                 <ul className="space-y-3 text-sm">
                   <li className="flex justify-between">
-                    <span className="text-muted-foreground">Veículo (PLACA):</span>
+                    <span className="text-neutral-400">Veículo (PLACA):</span>
                     <span className="font-medium text-right">{vehiclePlate}</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-muted-foreground">Condutor:</span>
+                    <span className="text-neutral-400">Condutor:</span>
                     <span className="font-medium text-right">{driverName}</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-muted-foreground">Ocorrência:</span>
+                    <span className="text-neutral-400">Ocorrência:</span>
                     <span className="font-medium text-right">{eventDate} às {eventTime}</span>
                   </li>
                   <li className="flex justify-between border-t border-white/10 pt-2 mt-2">
-                    <span className="text-muted-foreground">Houve Terceiro Envolvido:</span>
+                    <span className="text-neutral-400">Houve Terceiro Envolvido:</span>
                     <span className="font-medium text-right">{hasThirdParty === "sim" ? "Sim" : "Não"}</span>
                   </li>
                 </ul>

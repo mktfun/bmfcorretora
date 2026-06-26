@@ -315,7 +315,7 @@ export const TravelWizard = () => {
               />
 
               {isFetchingCep && (
-                <p className="text-sm text-muted-foreground">Buscando endereço...</p>
+                <p className="text-sm text-neutral-400">Buscando endereço...</p>
               )}
 
               <FormInput
@@ -394,7 +394,7 @@ export const TravelWizard = () => {
               </div>
 
               {departureDate && returnDate && new Date(returnDate) > new Date(departureDate) && (
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-neutral-400">
                   Duração:{" "}
                   {Math.ceil(
                     (new Date(returnDate).getTime() - new Date(departureDate).getTime()) /
@@ -454,7 +454,7 @@ export const TravelWizard = () => {
 
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium text-foreground">
+                  <label className="text-sm font-medium text-white">
                     Viajantes ({travelers.length})
                   </label>
                   <Button
@@ -475,7 +475,7 @@ export const TravelWizard = () => {
                     className="p-4 rounded-xl border border-white/10 bg-white/5 space-y-3"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-foreground">
+                      <span className="text-sm font-medium text-white">
                         Viajante {index + 1}
                       </span>
                       {travelers.length > 1 && (
@@ -579,7 +579,7 @@ export const TravelWizard = () => {
       </div>
 
       <div className="flex items-center justify-center mt-6 mb-4">
-        <p className="text-xs text-muted-foreground text-center flex items-center gap-1.5">
+        <p className="text-xs text-neutral-400 text-center flex items-center gap-1.5">
           <svg className="w-3.5 h-3.5 text-success" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
           </svg>

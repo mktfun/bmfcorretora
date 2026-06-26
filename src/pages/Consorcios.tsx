@@ -88,7 +88,7 @@ const Consorcios = () => {
                 <div className="w-14 h-14 bg-cyan-500/10 group-hover:bg-cyan-500/15 rounded-2xl flex items-center justify-center mb-6 transition-colors">
                   <f.icon className="text-cyan-400" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 font-playfair italic">{f.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{f.title}</h3>
                 <p className="text-neutral-400 font-light leading-relaxed">{f.description}</p>
               </motion.div>
             ))}

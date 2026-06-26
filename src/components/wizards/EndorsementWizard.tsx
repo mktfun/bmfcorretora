@@ -347,7 +347,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
                     </div>
                     <div className="text-center">
                       <span className="font-bold text-sm block mb-1">{option.label}</span>
-                      <span className="text-xs text-muted-foreground">{option.description}</span>
+                      <span className="text-xs text-neutral-400">{option.description}</span>
                     </div>
                   </button>
                 );
@@ -371,7 +371,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
             <div className="space-y-6">
               {/* Dados do Segurado - comum a todos */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground border-b pb-2">Dados do Segurado</h3>
+                <h3 className="font-semibold text-white border-b pb-2">Dados do Segurado</h3>
                 <FormInput
                   label="Nome Completo"
                   placeholder="Seu nome completo"
@@ -412,7 +412,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
               {endorsementType === "substituicao_veiculo" && (
                 <>
                   <div className="space-y-4">
-                    <h3 className="font-semibold text-foreground border-b pb-2">Veículo Atual (a ser substituído)</h3>
+                    <h3 className="font-semibold text-white border-b pb-2">Veículo Atual (a ser substituído)</h3>
                     <FormInput
                       label="Placa do Veículo Atual"
                       placeholder="ABC-1D23"
@@ -423,7 +423,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
                   </div>
 
                   <div className="space-y-4">
-                    <h3 className="font-semibold text-foreground border-b pb-2">Novo Veículo</h3>
+                    <h3 className="font-semibold text-white border-b pb-2">Novo Veículo</h3>
                     <FormInput
                       label="Modelo do Novo Veículo"
                       placeholder="Ex: Honda Civic EX 2024"
@@ -465,7 +465,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
               {/* ALTERAÇÃO DE CEP */}
               {endorsementType === "alteracao_cep" && (
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-foreground border-b pb-2">Novo Endereço de Pernoite</h3>
+                  <h3 className="font-semibold text-white border-b pb-2">Novo Endereço de Pernoite</h3>
                   <FormInput
                     label="Novo CEP"
                     placeholder="00000-000"
@@ -474,7 +474,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
                     inputMode="numeric"
                     required
                   />
-                  {isFetchingCep && <p className="text-sm text-muted-foreground">Buscando endereço...</p>}
+                  {isFetchingCep && <p className="text-sm text-neutral-400">Buscando endereço...</p>}
                   <div className="grid grid-cols-3 gap-4">
                     <div className="col-span-2">
                       <FormInput
@@ -522,7 +522,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
               {/* TROCA DE CONDUTOR */}
               {endorsementType === "troca_condutor" && (
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-foreground border-b pb-2">Dados do Novo Condutor Principal</h3>
+                  <h3 className="font-semibold text-white border-b pb-2">Dados do Novo Condutor Principal</h3>
                   <FormInput
                     label="Nome Completo"
                     placeholder="Nome do novo condutor"
@@ -569,7 +569,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
               {endorsementType === "cancelamento" && (
                 <>
                   <div className="space-y-4">
-                    <h3 className="font-semibold text-foreground border-b pb-2">Dados do Veículo</h3>
+                    <h3 className="font-semibold text-white border-b pb-2">Dados do Veículo</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <FormInput
                         label="Placa do Veículo"
@@ -589,7 +589,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
                   </div>
 
                   <div className="space-y-4">
-                    <h3 className="font-semibold text-foreground border-b pb-2">Motivo do Cancelamento (opcional)</h3>
+                    <h3 className="font-semibold text-white border-b pb-2">Motivo do Cancelamento (opcional)</h3>
                     <Textarea
                       placeholder="Informe o motivo do cancelamento, se desejar..."
                       value={cancelReason}

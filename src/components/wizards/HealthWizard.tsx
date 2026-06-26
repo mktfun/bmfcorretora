@@ -484,7 +484,7 @@ export const HealthWizard = () => {
                       ? 'bg-primary text-primary-foreground' 
                       : isActive 
                         ? 'bg-primary text-primary-foreground ring-4 ring-primary/20' 
-                        : 'bg-card border-2 border-white/10 text-muted-foreground'
+                        : 'bg-card border-2 border-white/10 text-neutral-400'
                     }
                   `}
                   whileHover={{ scale: 1.05 }}
@@ -497,7 +497,7 @@ export const HealthWizard = () => {
                 </motion.div>
                 <span className={`
                   mt-2 text-xs font-medium transition-colors
-                  ${isActive ? 'text-foreground' : 'text-muted-foreground'}
+                  ${isActive ? 'text-white' : 'text-neutral-400'}
                 `}>
                   {step.title}
                 </span>
@@ -553,8 +553,8 @@ export const HealthWizard = () => {
             flex items-center gap-2 px-6 py-3 rounded-full
             font-medium transition-all duration-300
             ${currentStep === 0 
-              ? 'text-muted-foreground cursor-not-allowed opacity-50' 
-              : 'text-foreground hover:bg-white/5 border border-white/10'
+              ? 'text-neutral-400 cursor-not-allowed opacity-50' 
+              : 'text-white hover:bg-white/5 border border-white/10'
             }
           `}
         >
@@ -571,7 +571,7 @@ export const HealthWizard = () => {
               font-semibold transition-all duration-300
               ${isStepValid(currentStep)
                 ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl'
-                : 'bg-white/5 border border-white/10 text-muted-foreground cursor-not-allowed'
+                : 'bg-white/5 border border-white/10 text-neutral-400 cursor-not-allowed'
               }
             `}
           >
@@ -587,7 +587,7 @@ export const HealthWizard = () => {
               font-semibold transition-all duration-300
               ${(isStepValid(currentStep) && acceptedTerms && acceptedPrivacy && !isSubmitting)
                 ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl'
-                : 'bg-white/5 border border-white/10 text-muted-foreground cursor-not-allowed'
+                : 'bg-white/5 border border-white/10 text-neutral-400 cursor-not-allowed'
               }
             `}
           >
@@ -608,7 +608,7 @@ export const HealthWizard = () => {
 
       {/* Security Badge */}
       <div className="flex items-center justify-center mt-6">
-        <p className="text-xs text-muted-foreground flex items-center gap-1.5">
+        <p className="text-xs text-neutral-400 flex items-center gap-1.5">
           <svg className="w-3.5 h-3.5 text-success" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
           </svg>

@@ -193,10 +193,10 @@ export const FuneralWizard = () => {
       className={`flex flex-col items-center justify-center p-4 rounded-xl border-2 transition-all gap-2 ${
         dependentType === id 
           ? "border-red-600 bg-red-50 text-red-600" 
-          : "border-white/10 bg-card text-muted-foreground hover:border-red-200"
+          : "border-white/10 bg-card text-neutral-400 hover:border-red-200"
       }`}
     >
-      <Icon className={`w-6 h-6 ${dependentType === id ? "text-red-600" : "text-muted-foreground"}`} />
+      <Icon className={`w-6 h-6 ${dependentType === id ? "text-red-600" : "text-neutral-400"}`} />
       <span className="text-xs font-bold uppercase tracking-tighter">{label}</span>
       {dependentType === id && <Check className="w-3 h-3 absolute top-2 right-2" />}
     </button>
@@ -269,19 +269,19 @@ export const FuneralWizard = () => {
           <FormCard title="Configure seu Plano" description="Informe quem você deseja proteger e sua localização">
             <div className="space-y-6">
               <div className="space-y-3">
-                <label className="text-sm font-bold text-foreground flex items-center gap-2">
+                <label className="text-sm font-bold text-white flex items-center gap-2">
                    <Users className="w-4 h-4 text-red-600" /> Possui dependentes?
                 </label>
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => setHasDependents("sim")}
-                    className={`py-3 rounded-xl border-2 font-bold text-sm transition-all ${hasDependents === "sim" ? "border-red-600 bg-red-600 text-white shadow-md shadow-red-200" : "border-white/10 text-muted-foreground"}`}
+                    className={`py-3 rounded-xl border-2 font-bold text-sm transition-all ${hasDependents === "sim" ? "border-red-600 bg-red-600 text-white shadow-md shadow-red-200" : "border-white/10 text-neutral-400"}`}
                   >
                     Sim
                   </button>
                   <button
                     onClick={() => setHasDependents("nao")}
-                    className={`py-3 rounded-xl border-2 font-bold text-sm transition-all ${hasDependents === "nao" ? "border-red-600 bg-red-600 text-white shadow-md shadow-red-200" : "border-white/10 text-muted-foreground"}`}
+                    className={`py-3 rounded-xl border-2 font-bold text-sm transition-all ${hasDependents === "nao" ? "border-red-600 bg-red-600 text-white shadow-md shadow-red-200" : "border-white/10 text-neutral-400"}`}
                   >
                     Não
                   </button>
@@ -375,7 +375,7 @@ export const FuneralWizard = () => {
       </div>
 
       <div className="flex items-center justify-center mt-8">
-        <p className="text-[10px] text-muted-foreground text-center flex items-center gap-1.5 font-medium uppercase tracking-tight">
+        <p className="text-[10px] text-neutral-400 text-center flex items-center gap-1.5 font-medium uppercase tracking-tight">
           <svg className="w-3.5 h-3.5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
           </svg>
