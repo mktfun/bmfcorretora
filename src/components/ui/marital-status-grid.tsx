@@ -1,5 +1,12 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface MaritalStatusGridProps {
   value: string;
@@ -21,26 +28,20 @@ export const MaritalStatusGrid: React.FC<MaritalStatusGridProps> = ({ value, onC
       <label className="text-sm font-medium text-neutral-300">
         Estado Civil {required && <span className="text-red-400 ml-0.5">*</span>}
       </label>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        {options.map((opt) => {
-          const isActive = value === opt.value;
-          return (
-            <button
-              key={opt.value}
-              type="button"
-              onClick={() => onChange(opt.value)}
-              className={cn(
-                "rounded-lg p-3 text-center cursor-pointer transition-all duration-200",
-                isActive
-                  ? "bg-[#e8702a]/20 border border-[#e8702a] text-white shadow-[0_0_15px_rgba(232,112,42,0.2)]"
-                  : "bg-white/5 border border-white/10 text-white/70 hover:bg-white/10"
-              )}
-            >
-              <span className={cn("text-sm font-medium", isActive ? "text-white" : "text-white/70")}>{opt.label}</span>
-            </button>
-          );
-        })}
-      </div>
+      <Select value={value} onValueChange={onChange}>
+        <SelectTrigger 
+          className="w-full bg-white/5 border-white/10 text-white h-12 rounded-xl focus:ring-[#e8702a]/30 focus:border-[#e8702a] transition-all"
+        >
+          <SelectValue placeholder="Selecione seu estado civil" />
+        </SelectTrigger>
+        <SelectContent className="bg-[#1a1a1a] border-white/10 text-white rounded-xl">
+          {options.map((opt) => (
+            <SelectItem key={opt.value} value={opt.value} className="focus:bg-white/10 focus:text-white cursor-pointer">
+              {opt.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
     </div>
   );
 };

@@ -75,8 +75,7 @@ export const InsuranceTypes = () => {
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto mb-12 lg:mb-16 max-w-2xl text-center"
         >
@@ -99,8 +98,7 @@ export const InsuranceTypes = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
               className="group relative flex flex-col items-center sm:items-start text-center sm:text-left bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 hover:border-cyan-500/40 hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_0_24px_rgba(6,182,212,0.08)]"
             >
@@ -114,7 +112,7 @@ export const InsuranceTypes = () => {
                 <insurance.icon size={28} className="text-cyan-400" />
               </div>
               
-              <h3 className="mb-2 text-xl font-bold text-white font-playfair italic">
+              <h3 className="mb-2 text-xl font-bold text-white">
                 {insurance.title}
               </h3>
               
