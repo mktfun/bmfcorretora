@@ -58,7 +58,7 @@ const endorsementOptions = [
     description: "Cancelar o seguro",
     icon: XCircle,
     color: "text-rose-600",
-    bgColor: "bg-rose-100",
+    bgColor: "bg-rose-500/20",
   },
 ];
 
@@ -354,7 +354,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
                     className={`group relative flex flex-col items-center justify-center p-6 border-2 rounded-xl cursor-pointer transition-all duration-200 gap-3 h-36 ${
                       isSelected
                         ? `border-primary bg-primary/5 shadow-md scale-[1.02]`
-                        : "border-muted bg-background hover:border-muted-foreground/30 hover:bg-muted/30"
+                        : "border-muted bg-[#111] hover:border-muted-foreground/30 hover:bg-white/5"
                     }`}
                   >
                     <div className={`p-3 rounded-full ${option.bgColor} transition-colors`}>
@@ -614,7 +614,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
                   </div>
 
                   {/* Aviso de Cancelamento */}
-                  <div className="bg-rose-50 border border-rose-200 rounded-lg p-4 flex gap-3">
+                  <div className="bg-rose-500/10 border border-rose-500/20 rounded-lg p-4 flex gap-3">
                     <AlertTriangle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
                     <div className="text-sm text-rose-800">
                       <strong>Atenção:</strong> O cancelamento do seguro é uma ação irreversível. Após a transmissão da proposta de cancelamento, não será possível reativar a apólice.
@@ -643,7 +643,7 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
           <FormCard title="Termo de Aceite" description="Leia e aceite os termos para continuar">
             <div className="space-y-6">
               {/* Termo específico do endosso */}
-              <div className={`p-4 rounded-lg border-2 ${endorsementType === "cancelamento" ? "bg-rose-50 border-rose-200" : "bg-amber-50 border-amber-200"}`}>
+              <div className={`p-4 rounded-lg border-2 ${endorsementType === "cancelamento" ? "bg-rose-500/10 border-rose-500/20" : "bg-amber-500/10 border-amber-500/20 text-amber-200"}`}>
                 <div className="flex items-start gap-3">
                   <Checkbox
                     id="endorsement-terms"

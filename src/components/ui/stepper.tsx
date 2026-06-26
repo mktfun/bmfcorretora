@@ -34,30 +34,35 @@ const Stepper = ({ steps, currentStep, className }: StepperProps) => {
                     isCompleted
                       ? "border-cyan-400 bg-cyan-400 text-black"
                       : isCurrent
-                      ? "border-cyan-500 bg-cyan-500/10 text-cyan-400"
-                      : "border-white/20 bg-white/5 text-neutral-400"
+                      ? "border-cyan-500 bg-cyan-500/10 text-cyan-400 font-semibold"
+                      : "border-white/20 bg-transparent text-white/40"
                   )}
                 >
                   {isCompleted ? (
-                    <Check className="h-5 w-5" />
+                    <Check className="h-5 w-5 text-black" />
                   ) : (
-                    <span className="text-sm font-semibold">{index + 1}</span>
+                    <span className="text-sm">{index + 1}</span>
                   )}
                 </div>
                 {/* Step text */}
                 <div className="flex flex-col">
                   <span
                     className={cn(
-                      "text-sm font-medium transition-colors",
-                      isCurrent || isCompleted
-                        ? "text-white"
-                        : "text-neutral-400"
+                      "text-sm transition-colors",
+                      isCurrent
+                        ? "text-white font-semibold"
+                        : isCompleted
+                        ? "text-white font-medium"
+                        : "text-white/40"
                     )}
                   >
                     {step.title}
                   </span>
                   {step.description && (
-                    <span className="text-xs text-neutral-400">
+                    <span className={cn(
+                      "text-xs",
+                      isCurrent || isCompleted ? "text-white/70" : "text-white/40"
+                    )}>
                       {step.description}
                     </span>
                   )}
@@ -80,10 +85,10 @@ const Stepper = ({ steps, currentStep, className }: StepperProps) => {
       {/* Mobile stepper - simplified progress bar */}
       <div className="sm:hidden">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-white">
+          <span className="text-sm font-semibold text-white">
             {steps[currentStep]?.title}
           </span>
-          <span className="text-sm text-neutral-500">
+          <span className="text-sm text-white/50">
             {currentStep + 1} de {steps.length}
           </span>
         </div>

@@ -442,7 +442,7 @@ export const SmartphoneWizard = () => {
                 required
               />
 
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 flex items-start gap-3">
+              <div className="bg-amber-500/10 border border-amber-500/20 text-amber-200 rounded-lg p-3 flex items-start gap-3">
                 <AlertTriangle className="text-amber-600 shrink-0 mt-0.5" size={18} />
                 <p className="text-sm text-amber-800">
                   <strong>Importante:</strong> A nota fiscal do aparelho é obrigatória para que as seguradoras possam processar a indenização em caso de sinistro. Guarde-a em local seguro.

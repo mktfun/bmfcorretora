@@ -550,7 +550,7 @@ export const ResidentialWizard = () => {
                     Recomendado
                   </span>
                 </div>
-                <div className="border-2 border-border bg-muted/30 rounded-xl p-0.5">
+                <div className="border-2 border-white/10 bg-white/5 rounded-xl p-0.5">
                   <ToggleSwitch
                     label="Eletrônicos Portáteis"
                     description="Notebooks, celulares e tablets protegidos mesmo fora de casa"

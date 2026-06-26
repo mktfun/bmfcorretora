@@ -401,7 +401,7 @@ export const FiancaWizard = () => {
                 />
               </div>
 
-              <div className="border-t border-border pt-5 mt-2">
+              <div className="border-t border-white/10 pt-5 mt-2">
                 <h3 className="font-semibold text-foreground mb-4">Valores</h3>
                 <div className="space-y-4">
                   <FormInput
@@ -431,7 +431,7 @@ export const FiancaWizard = () => {
                 </div>
               </div>
 
-              <div className="border-t border-border pt-5 mt-2">
+              <div className="border-t border-white/10 pt-5 mt-2">
                 <SegmentedControl
                   label="Tempo de Contrato"
                   options={[

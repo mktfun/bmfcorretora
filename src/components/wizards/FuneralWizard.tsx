@@ -193,7 +193,7 @@ export const FuneralWizard = () => {
       className={`flex flex-col items-center justify-center p-4 rounded-xl border-2 transition-all gap-2 ${
         dependentType === id 
           ? "border-red-600 bg-red-50 text-red-600" 
-          : "border-border bg-card text-muted-foreground hover:border-red-200"
+          : "border-white/10 bg-card text-muted-foreground hover:border-red-200"
       }`}
     >
       <Icon className={`w-6 h-6 ${dependentType === id ? "text-red-600" : "text-muted-foreground"}`} />
@@ -290,13 +290,13 @@ export const FuneralWizard = () => {
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => setHasDependents("sim")}
-                    className={`py-3 rounded-xl border-2 font-bold text-sm transition-all ${hasDependents === "sim" ? "border-red-600 bg-red-600 text-white shadow-md shadow-red-200" : "border-border text-muted-foreground"}`}
+                    className={`py-3 rounded-xl border-2 font-bold text-sm transition-all ${hasDependents === "sim" ? "border-red-600 bg-red-600 text-white shadow-md shadow-red-200" : "border-white/10 text-muted-foreground"}`}
                   >
                     Sim
                   </button>
                   <button
                     onClick={() => setHasDependents("nao")}
-                    className={`py-3 rounded-xl border-2 font-bold text-sm transition-all ${hasDependents === "nao" ? "border-red-600 bg-red-600 text-white shadow-md shadow-red-200" : "border-border text-muted-foreground"}`}
+                    className={`py-3 rounded-xl border-2 font-bold text-sm transition-all ${hasDependents === "nao" ? "border-red-600 bg-red-600 text-white shadow-md shadow-red-200" : "border-white/10 text-muted-foreground"}`}
                   >
                     Não
                   </button>
@@ -314,7 +314,7 @@ export const FuneralWizard = () => {
                 </div>
               )}
 
-              <div className="pt-4 border-t border-dashed border-border">
+              <div className="pt-4 border-t border-dashed border-white/10">
                 <FormInput
                   label="Seu CEP"
                   placeholder="00000-000"

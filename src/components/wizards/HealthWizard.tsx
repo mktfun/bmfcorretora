@@ -499,7 +499,7 @@ export const HealthWizard = () => {
                       ? 'bg-primary text-primary-foreground' 
                       : isActive 
                         ? 'bg-primary text-primary-foreground ring-4 ring-primary/20' 
-                        : 'bg-card border-2 border-border text-muted-foreground'
+                        : 'bg-card border-2 border-white/10 text-muted-foreground'
                     }
                   `}
                   whileHover={{ scale: 1.05 }}
@@ -524,7 +524,7 @@ export const HealthWizard = () => {
 
       {/* Step Content - Glassmorphism Card */}
       <motion.div
-        className="bg-card/80 backdrop-blur-md rounded-2xl border border-border/50 shadow-xl overflow-hidden"
+        className="bg-card/80 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
@@ -569,7 +569,7 @@ export const HealthWizard = () => {
             font-medium transition-all duration-300
             ${currentStep === 0 
               ? 'text-muted-foreground cursor-not-allowed opacity-50' 
-              : 'text-foreground hover:bg-muted'
+              : 'text-foreground hover:bg-white/5 border border-white/10'
             }
           `}
         >
@@ -586,7 +586,7 @@ export const HealthWizard = () => {
               font-semibold transition-all duration-300
               ${isStepValid(currentStep)
                 ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl'
-                : 'bg-muted text-muted-foreground cursor-not-allowed'
+                : 'bg-white/5 border border-white/10 text-muted-foreground cursor-not-allowed'
               }
             `}
           >
@@ -602,7 +602,7 @@ export const HealthWizard = () => {
               font-semibold transition-all duration-300
               ${(isStepValid(currentStep) && acceptedTerms && acceptedPrivacy && !isSubmitting)
                 ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl'
-                : 'bg-muted text-muted-foreground cursor-not-allowed'
+                : 'bg-white/5 border border-white/10 text-muted-foreground cursor-not-allowed'
               }
             `}
           >

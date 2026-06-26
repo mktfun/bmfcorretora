@@ -487,7 +487,7 @@ export const TravelWizard = () => {
                 {travelers.map((traveler, index) => (
                   <div
                     key={traveler.id}
-                    className="p-4 rounded-xl border border-border bg-muted/30 space-y-3"
+                    className="p-4 rounded-xl border border-white/10 bg-white/5 space-y-3"
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-medium text-foreground">

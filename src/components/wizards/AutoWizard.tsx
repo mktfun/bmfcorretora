@@ -552,7 +552,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
 
               {/* Linha 3: Bloco de Booleanos - Oculto para Renovação */}
               {dealType !== "renovacao" && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-muted/50 rounded-xl border border-border">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
                   <YesNoToggle
                     label="Veículo Zero KM?"
                     value={isZeroKm}
@@ -623,7 +623,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
               
               {/* BLOCO A: Endereço Compacto */}
               <div className="space-y-4">
-                <div className="flex items-center gap-3 pb-2 border-b border-border">
+                <div className="flex items-center gap-3 pb-2 border-b border-white/10">
                   <h3 className="font-semibold text-foreground">Endereço</h3>
                   <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-mono rounded-full">
                     {cep}
@@ -677,7 +677,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
 
               {/* BLOCO B: Residência & Garagem */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground pb-2 border-b border-border">Residência & Garagem</h3>
+                <h3 className="font-semibold text-foreground pb-2 border-b border-white/10">Residência & Garagem</h3>
                 
                 <div className="space-y-3">
                   <Label className="text-sm font-medium">Qual seu tipo de residência?</Label>
@@ -744,7 +744,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
               
               {/* BLOCO A: Rotina - Trabalho */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground pb-2 border-b border-border flex items-center gap-2">
+                <h3 className="font-semibold text-foreground pb-2 border-b border-white/10 flex items-center gap-2">
                   <Briefcase size={18} /> Rotina de Trabalho
                 </h3>
                 
@@ -783,7 +783,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
 
               {/* BLOCO B: Rotina - Faculdade */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground pb-2 border-b border-border flex items-center gap-2">
+                <h3 className="font-semibold text-foreground pb-2 border-b border-white/10 flex items-center gap-2">
                   <GraduationCap size={18} /> Rotina de Estudo
                 </h3>
                 
@@ -822,7 +822,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
 
               {/* BLOCO C: Condutor Jovem (Lógica Condicional) */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-foreground pb-2 border-b border-border flex items-center gap-2">
+                <h3 className="font-semibold text-foreground pb-2 border-b border-white/10 flex items-center gap-2">
                   <Users size={18} /> Condutor Jovem
                 </h3>
                 
@@ -871,7 +871,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
                     <div className="space-y-2">
                       <label className="text-sm font-medium">Sexo <span className="text-destructive">*</span></label>
                       <Select value={youngDriverGender} onValueChange={setYoungDriverGender}>
-                        <SelectTrigger className="bg-background"><SelectValue placeholder="Selecione..." /></SelectTrigger>
+                        <SelectTrigger className="bg-[#111]"><SelectValue placeholder="Selecione..." /></SelectTrigger>
                         <SelectContent>
                           <SelectItem value="masculino">Masculino</SelectItem>
                           <SelectItem value="feminino">Feminino</SelectItem>
@@ -885,7 +885,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
               {/* BLOCO D: Sinistro - Apenas para Renovação */}
               {dealType === "renovacao" && (
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-foreground pb-2 border-b border-border flex items-center gap-2">
+                  <h3 className="font-semibold text-foreground pb-2 border-b border-white/10 flex items-center gap-2">
                     ⚠️ Histórico de Sinistros
                   </h3>
                   
@@ -896,7 +896,7 @@ export const AutoWizard: React.FC<AutoWizardProps> = ({ dealType, isUber = false
                   />
                   
                   {hadClaim === "sim" && (
-                    <p className="text-sm text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg border border-amber-200 dark:border-amber-800">
+                    <p className="text-sm text-amber-600 dark:text-amber-400 bg-amber-500/10 dark:bg-amber-900/20 p-3 rounded-lg border border-amber-500/20 text-amber-200 dark:border-amber-800">
                       ⚠️ Importante: sinistros podem impactar o valor do prêmio na renovação. Entraremos em contato para mais detalhes.
                     </p>
                   )}

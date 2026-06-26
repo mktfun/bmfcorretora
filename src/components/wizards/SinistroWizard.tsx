@@ -222,7 +222,7 @@ export const SinistroWizard: React.FC = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
-      <div className="bg-muted/50 border border-border p-4 rounded-xl mb-6">
+      <div className="bg-white/5 border border-white/10 p-4 rounded-xl mb-6">
         <div className="flex items-start gap-3">
           <AlertTriangle className="text-foreground/80 shrink-0 mt-0.5" size={20} />
           <div>
@@ -392,7 +392,7 @@ export const SinistroWizard: React.FC = () => {
                   placeholder="Descreva de forma clara e resumida a dinâmica do acidente ou evento..."
                   value={eventReport}
                   onChange={(e) => setEventReport(e.target.value)}
-                  className="min-h-[120px] bg-background border-input focus:ring-2 focus:ring-primary/20 resize-y"
+                  className="min-h-[120px] bg-[#111] border-input focus:ring-2 focus:ring-primary/20 resize-y"
                 />
               </div>
             </div>
@@ -450,8 +450,8 @@ export const SinistroWizard: React.FC = () => {
               />
 
               {hasThirdParty === "sim" && (
-                <div className="space-y-5 animate-slide-in pt-4 border-t border-border mt-4">
-                  <div className="bg-muted/50 p-4 rounded-xl flex gap-3 border border-border mb-2">
+                <div className="space-y-5 animate-slide-in pt-4 border-t border-white/10 mt-4">
+                  <div className="bg-white/5 p-4 rounded-xl flex gap-3 border border-white/10 mb-2">
                     <FileText className="text-foreground/80 shrink-0 mt-0.5" size={20} />
                     <p className="text-sm text-muted-foreground">
                       <strong>Atenção:</strong> Será necessário nos enviar a foto do documento do veículo do terceiro e os boletins de ocorrência através do nosso WhatsApp ao fim da solicitação.
@@ -530,7 +530,7 @@ export const SinistroWizard: React.FC = () => {
         <div className="space-y-6 animate-slide-in">
           <FormCard title="Conclusão e Aceite" description="Confirme os dados para prosseguir com a abertura do sinistro">
             <div className="space-y-6">
-              <div className="bg-muted p-4 rounded-lg">
+              <div className="bg-white/5 border border-white/10 p-4 rounded-lg">
                 <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Resumo da Solicitação</h4>
                 <ul className="space-y-3 text-sm">
                   <li className="flex justify-between">
@@ -545,7 +545,7 @@ export const SinistroWizard: React.FC = () => {
                     <span className="text-muted-foreground">Ocorrência:</span>
                     <span className="font-medium text-right">{eventDate} às {eventTime}</span>
                   </li>
-                  <li className="flex justify-between border-t border-border/50 pt-2 mt-2">
+                  <li className="flex justify-between border-t border-white/10 pt-2 mt-2">
                     <span className="text-muted-foreground">Houve Terceiro Envolvido:</span>
                     <span className="font-medium text-right">{hasThirdParty === "sim" ? "Sim" : "Não"}</span>
                   </li>
@@ -564,7 +564,7 @@ export const SinistroWizard: React.FC = () => {
       )}
 
       {/* Navegação Inferior */}
-      <div className="flex items-center justify-between pt-6 border-t border-border mt-8">
+      <div className="flex items-center justify-between pt-6 border-t border-white/10 mt-8">
         <Button variant="outline" onClick={prevStep} disabled={currentStep === 0 || isSubmitting} className="w-full sm:w-auto h-12 px-6">
           <ArrowLeft size={18} className="mr-2" />
           Voltar
