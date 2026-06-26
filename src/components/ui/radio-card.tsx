@@ -51,24 +51,18 @@ const RadioCardGroup = ({
               className={cn(
                 "relative flex flex-col items-start p-4 rounded-xl border transition-all duration-200",
                 "min-h-[60px] text-left",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/30 focus-visible:ring-offset-0",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e8702a]/30 focus-visible:ring-offset-0",
                 isSelected
-                  ? "border-cyan-500/50 bg-cyan-500/10 shadow-[0_0_12px_rgba(6,182,212,0.1)]"
-                  : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/8"
+                  ? "border-[#e8702a] bg-[#e8702a]/20 shadow-[0_0_15px_rgba(232,112,42,0.2)]"
+                  : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/10"
               )}
             >
-              {/* Selected indicator */}
-              {isSelected && (
-                <div className="absolute top-2 right-2 h-5 w-5 rounded-full bg-cyan-500 flex items-center justify-center">
-                  <Check className="h-3 w-3 text-black" />
-                </div>
-              )}
               {/* Icon */}
               {option.icon && (
                 <div
                   className={cn(
                     "mb-2 transition-colors",
-                    isSelected ? "text-cyan-400" : "text-neutral-400"
+                    isSelected ? "text-[#e8702a]" : "text-white/70"
                   )}
                 >
                   {option.icon}
@@ -78,7 +72,7 @@ const RadioCardGroup = ({
               <span
                 className={cn(
                   "text-sm font-semibold transition-colors",
-                  isSelected ? "text-white" : "text-neutral-300"
+                  isSelected ? "text-white" : "text-white/70"
                 )}
               >
                 {option.label}

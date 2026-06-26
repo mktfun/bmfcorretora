@@ -6,7 +6,7 @@ import { FormInput } from "@/components/ui/form-input";
 import { RadioCardGroup } from "@/components/ui/radio-card";
 import { ToggleSwitch } from "@/components/ui/toggle-switch";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, Plus, Trash2, Loader2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Plus, Trash2, Loader2, Plane } from "lucide-react";
 import { toast } from "sonner";
 import { sendToRDStation, buildTravelPayload } from "@/utils/dataProcessor";
 import { usePartialLead } from "@/hooks/usePartialLead";
@@ -252,7 +252,22 @@ export const TravelWizard = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto pb-20">
+    <div className="w-full max-w-2xl mx-auto">
+      <div className="border-b border-white/10 pb-4 mb-6">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="p-2 bg-[#e8702a]/10 rounded-lg">
+            <Plane className="w-8 h-8 text-[#e8702a]" />
+          </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-playfair font-semibold text-white">
+              Cotação de Seguro Viagem
+            </h2>
+            <p className="text-sm text-white/60 mt-1">
+              Preencha as informações para viajar com tranquilidade.
+            </p>
+          </div>
+        </div>
+      </div>
       <Stepper steps={steps} currentStep={currentStep} className="mb-8" />
 
       <div className="min-h-[400px]">

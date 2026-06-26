@@ -234,11 +234,28 @@ export const SinistroWizard: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-card shadow-sm border border-border/50 rounded-2xl p-4 sm:p-6 mb-8 overflow-x-auto">
-        <div className="min-w-[400px]">
-          <Stepper steps={steps} currentStep={currentStep} />
+      <div className="w-full max-w-3xl mx-auto">
+        <div className="border-b border-white/10 pb-4 mb-6">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="p-2 bg-[#e8702a]/10 rounded-lg">
+              <AlertTriangle className="w-8 h-8 text-[#e8702a]" />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-playfair font-semibold text-white">
+                Aviso de Sinistro
+              </h2>
+              <p className="text-sm text-white/60 mt-1">
+                Preencha as informações para registrar o ocorrido.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+        
+        <div className="bg-[#111]/80 shadow-sm border border-white/10 rounded-2xl p-4 sm:p-6 mb-8 overflow-x-auto">
+          <div className="min-w-[400px]">
+            <Stepper steps={steps} currentStep={currentStep} />
+          </div>
+        </div>
 
       {currentStep === 0 && (
         <div className="space-y-6 animate-slide-in">

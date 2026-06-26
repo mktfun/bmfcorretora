@@ -21,7 +21,7 @@ export const MaritalStatusGrid: React.FC<MaritalStatusGridProps> = ({ value, onC
       <label className="text-sm font-medium text-neutral-300">
         Estado Civil {required && <span className="text-red-400 ml-0.5">*</span>}
       </label>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {options.map((opt) => {
           const isActive = value === opt.value;
           return (
@@ -30,13 +30,13 @@ export const MaritalStatusGrid: React.FC<MaritalStatusGridProps> = ({ value, onC
               type="button"
               onClick={() => onChange(opt.value)}
               className={cn(
-                "p-3 rounded-lg text-xs md:text-sm text-center transition-all duration-200 h-full flex items-center justify-center",
+                "rounded-lg p-3 text-center cursor-pointer transition-all duration-200",
                 isActive
-                  ? "bg-cyan-600 text-white font-medium shadow-[0_0_15px_rgba(6,182,212,0.4)] border border-cyan-400"
-                  : "bg-white/10 text-white hover:bg-white/20 border border-transparent"
+                  ? "bg-[#e8702a]/20 border border-[#e8702a] text-white shadow-[0_0_15px_rgba(232,112,42,0.2)]"
+                  : "bg-white/5 border border-white/10 text-white/70 hover:bg-white/10"
               )}
             >
-              {opt.label}
+              <span className={cn("text-sm font-medium", isActive ? "text-white" : "text-white/70")}>{opt.label}</span>
             </button>
           );
         })}

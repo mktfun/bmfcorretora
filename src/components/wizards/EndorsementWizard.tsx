@@ -16,6 +16,7 @@ import {
   User,
   XCircle,
   AlertTriangle,
+  FileText,
 } from "lucide-react";
 import { toast } from "sonner";
 import { sendToRDStation, buildEndorsementPayload } from "@/utils/dataProcessor";
@@ -319,6 +320,21 @@ export const EndorsementWizard: React.FC<EndorsementWizardProps> = ({ isUber = f
 
   return (
     <div className="w-full max-w-2xl mx-auto">
+      <div className="border-b border-white/10 pb-4 mb-6">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="p-2 bg-[#e8702a]/10 rounded-lg">
+            <FileText className="w-8 h-8 text-[#e8702a]" />
+          </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-playfair font-semibold text-white">
+              Cotação de Endosso
+            </h2>
+            <p className="text-sm text-white/60 mt-1">
+              Preencha as informações abaixo para solicitar sua alteração.
+            </p>
+          </div>
+        </div>
+      </div>
       {endorsementType && <Stepper steps={steps} currentStep={currentStep} className="mb-8" />}
 
       <div className="min-h-[400px]">

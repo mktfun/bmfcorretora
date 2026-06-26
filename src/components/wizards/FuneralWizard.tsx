@@ -203,14 +203,31 @@ export const FuneralWizard = () => {
   );
 
   return (
-    <div className="w-full max-w-2xl mx-auto pb-20">
+    <div className="w-full max-w-2xl mx-auto pb-10">
+      <div className="border-b border-white/10 pb-4 mb-6">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="p-2 bg-[#e8702a]/10 rounded-lg">
+            <Heart className="w-8 h-8 text-[#e8702a]" />
+          </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-playfair font-semibold text-white">
+              Cotação de Auxílio Funeral
+            </h2>
+            <p className="text-sm text-white/60 mt-1">
+              Preencha as informações abaixo para conhecer nossos planos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <Stepper steps={steps} currentStep={currentStep} className="mb-8" />
+      
       <div className="flex justify-center mb-6">
          <div className="bg-red-100 text-red-600 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 border border-red-200 shadow-sm">
            <Heart className="w-3 h-3 fill-current" /> Proteção Familiar Premium
          </div>
       </div>
 
-      <Stepper steps={steps} currentStep={currentStep} className="mb-8" />
 
       <div className="min-h-[350px]">
         {/* Step 1: Dados do Titular */}
