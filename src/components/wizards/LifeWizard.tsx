@@ -235,21 +235,6 @@ export const LifeWizard = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <div className="border-b border-white/10 pb-4 mb-6">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="p-2 bg-[#e8702a]/10 rounded-lg">
-            <Heart className="w-8 h-8 text-[#e8702a]" />
-          </div>
-          <div>
-            <h2 className="text-2xl md:text-3xl font-playfair font-semibold text-white">
-              Cotação de Seguro de Vida
-            </h2>
-            <p className="text-sm text-white/60 mt-1">
-              Preencha as informações abaixo para proteger quem você ama.
-            </p>
-          </div>
-        </div>
-      </div>
       <Stepper steps={steps} currentStep={currentStep} className="mb-8" />
 
       <div className="min-h-[400px]">

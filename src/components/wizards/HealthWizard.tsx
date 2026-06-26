@@ -456,21 +456,6 @@ export const HealthWizard = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto pb-20">
-      <div className="border-b border-white/10 pb-4 mb-6">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="p-2 bg-[#e8702a]/10 rounded-lg">
-            <HeartPulse className="w-8 h-8 text-[#e8702a]" />
-          </div>
-          <div>
-            <h2 className="text-2xl md:text-3xl font-playfair font-semibold text-white">
-              Cotação de Plano de Saúde
-            </h2>
-            <p className="text-sm text-white/60 mt-1">
-              Encontre o plano ideal para você, sua família ou empresa.
-            </p>
-          </div>
-        </div>
-      </div>
       {/* Progress Stepper - Minimalista */}
       <div className="mb-10">
         <div className="flex items-center justify-between relative">
