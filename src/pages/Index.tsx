@@ -1,33 +1,35 @@
-import { Header } from "@/components/Header";
+import React from 'react';
 import { SaaSHero } from "@/components/SaaSHero";
-import { OldVsNew } from "@/components/OldVsNew";
+import { BentoFeatures } from "@/components/BentoFeatures";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { TrustSection } from "@/components/TrustSection";
+import { FooterCTA } from "@/components/FooterCTA";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black scroll-smooth">
-      {/* Header global removido do topo para evitar conflito com a Sub-Nav do SaaSHero, mas pode ser reintegrado se necessário */}
-      
-      <main className="relative flex-1 bg-[#050505]">
-        {/* Nova Hero com Sticky CTA (Estilo SaaS B2B) */}
+      <main className="relative flex-1 bg-black">
+        {/* Nova Hero Abstrata com Particles e Spotlight */}
         <SaaSHero />
 
-        {/* Comparativo: Velho Jeito x Jeito BMF */}
-        <OldVsNew />
+        {/* Grid de Serviços com Hover Effects (Bento Grid) */}
+        <BentoFeatures />
 
-        {/* Três passos de Workflow (Estilo Altium - Design, Share, Collaborate) */}
+        {/* Três passos de Workflow com Slide-Up */}
         <WorkflowSteps />
 
-        {/* Carrossel de Depoimentos em vídeo vertical */}
+        {/* Infinite Moving Cards para Depoimentos */}
         <TestimonialCarousel />
 
         {/* Logos das Seguradoras */}
-        <section className="relative bg-[#0a0a0a]">
+        <section className="relative bg-[#050505]">
           <TrustSection />
         </section>
+
+        {/* CTA Imersivo Final */}
+        <FooterCTA />
       </main>
       
       {/* Footer */}
