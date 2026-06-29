@@ -63,7 +63,7 @@ export const BentoFeatures = () => {
               viewport={{ once: true }}
               transition={{ delay: feat.delay, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               onClick={() => navigate(feat.link)}
-              className={`group relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 cursor-pointer transition-all duration-500 hover:border-cyan-500/40 hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(6,182,212,0.08)] ${feat.colSpan}`}
+              className={`group relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 cursor-pointer transition-all duration-500 hover:border-cyan-500/40 hover:shadow-[0_0_24px_rgba(6,182,212,0.08)] ${feat.colSpan}`}
             >
               {/* Radial gradient hover effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

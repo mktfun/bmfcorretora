@@ -6,10 +6,12 @@ import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { TrustSection } from "@/components/TrustSection";
 import { FooterCTA } from "@/components/FooterCTA";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black scroll-smooth">
+      <Header />
       <main className="relative flex-1 bg-black">
         {/* Nova Hero Abstrata com Particles e Spotlight */}
         <SaaSHero />
