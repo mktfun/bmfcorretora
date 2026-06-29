@@ -36,7 +36,7 @@ export const TestimonialCarousel = () => {
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10">
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
           Confiado por <br className="hidden md:block" />
-          <span className="font-playfair italic text-cyan-400 font-light">inovadores</span>
+          <span className="font-semibold text-cyan-400 font-light">inovadores</span>
         </h2>
         <p className="text-neutral-400 max-w-md mx-auto">
           Milhares de empresas e indivíduos já protegem seu futuro conosco.

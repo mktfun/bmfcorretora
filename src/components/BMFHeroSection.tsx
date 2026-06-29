@@ -104,7 +104,7 @@ export const BMFHeroSection = () => {
         {/* Títulos Centrais */}
         <div className="mt-[20vh] md:mt-[22vh] flex flex-col items-center text-center text-white leading-[1.05]">
           <h1 className="flex flex-col items-center">
-            <span className="font-playfair italic text-5xl sm:text-6xl md:text-[5.5rem] tracking-tight hero-anim hero-reveal" style={{ animationDelay: '0.25s' }}>
+            <span className="font-semibold text-5xl sm:text-6xl md:text-[5.5rem] tracking-tight hero-anim hero-reveal" style={{ animationDelay: '0.25s' }}>
               Protegendo o que
             </span>
             <span className="font-sans font-bold text-5xl sm:text-6xl md:text-[5.5rem] tracking-tight -mt-1 hero-anim hero-reveal" style={{ animationDelay: '0.42s' }}>

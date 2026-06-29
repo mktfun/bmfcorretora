@@ -9,7 +9,7 @@ export const OldVsNew = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Do Caos Burocrático à <br className="hidden md:block" />
-            <span className="font-playfair italic text-cyan-400 font-light">Clareza Digital</span>
+            <span className="font-semibold text-cyan-400 font-light">Clareza Digital</span>
           </h2>
           <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Abandone os processos lentos e desorganizados. A BMF Corretora consolida sua proteção com tecnologia de ponta.

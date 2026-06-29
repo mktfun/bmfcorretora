@@ -315,7 +315,7 @@ const InsuranceHub = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-5 leading-[1.08] tracking-tight"
           >
-            <span className="font-playfair italic text-white/95">Qual proteção</span>{" "}você busca hoje?
+            <span className="font-semibold text-white/95">Qual proteção</span>{" "}você busca hoje?
           </motion.h1>
           
           <motion.p

@@ -37,7 +37,7 @@
 
 ## Padrão Lithos (Design Language BMF)
 
-- **Tipografia obrigatória nas pages**: `h1` e `h2` sempre com a primeira palavra/bloco em `font-playfair italic text-white/95`, seguida de texto sans-serif regular. Ex: `<span className="font-playfair italic">Proteção</span>{" "}para o que importa`.
+- **Tipografia obrigatória nas pages**: `h1` e `h2` devem SEMPRE usar a fonte padrão sem-serifa (`Inter`) com pesos fortes (`font-bold` ou `font-semibold`), visando legibilidade absoluta. Ex: `<span className="font-semibold text-white/95">Proteção</span>{" "}para o que importa`. É EXPRESSAMENTE PROIBIDO o uso de fontes serifadas (`Playfair`) ou itálicas (`italic`) nos títulos principais, pois prejudicam a leitura rápida em interfaces Dark Premium.
 - **Ease premium**: Usar `ease: [0.16, 1, 0.3, 1]` (cubic-bezier de entrada suave) em todas as animações Framer Motion de entrada (`animate`). Duração mínima `0.6s`.
 - **Radial glow de fundo**: Cada página interna deve ter um `div.fixed.inset-0.pointer-events-none.z-0` com `div.absolute` contendo `bg-cyan-500/5 rounded-full blur-[120px]` centralizado no topo. Cria coerência visual com o Hero.
 - **Badge/pill de seção**: Sempre `bg-white/5 border border-cyan-500/20 px-4 py-1.5 rounded-full text-cyan-400 text-sm` — não apenas `bg-cyan-500/10` sem border.

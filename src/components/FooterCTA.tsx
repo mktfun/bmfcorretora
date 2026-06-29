@@ -21,7 +21,7 @@ export const FooterCTA = () => {
         >
           <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-8">
             Pronto para dar o <br />
-            <span className="font-playfair italic font-light text-cyan-400">Próximo Passo?</span>
+            <span className="font-semibold font-light text-cyan-400">Próximo Passo?</span>
           </h2>
           
           <p className="text-xl text-neutral-400 mb-12 max-w-2xl mx-auto">

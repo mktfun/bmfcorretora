@@ -29,7 +29,7 @@ export const WorkflowSteps = () => {
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Cote, Analise e Proteja em <br className="hidden md:block" />
-            <span className="font-playfair italic text-cyan-400 font-light">um único fluxo integrado</span>
+            <span className="font-semibold text-cyan-400 font-light">um único fluxo integrado</span>
           </h2>
         </div>
 

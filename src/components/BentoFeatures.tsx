@@ -47,7 +47,7 @@ export const BentoFeatures = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Nossas soluções de <br className="hidden md:block" />
-            <span className="font-playfair italic text-cyan-400 font-light">Proteção Premium</span>
+            <span className="font-semibold text-cyan-400 font-light">Proteção Premium</span>
           </h2>
           <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Uma esteira completa de produtos para blindar seu patrimônio e garantir seu futuro.
@@ -73,7 +73,7 @@ export const BentoFeatures = () => {
                   <feat.icon className="text-cyan-400" size={24} />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-3 font-playfair italic">{feat.title}</h3>
+                <h3 className="text-2xl font-bold text-white mb-3 font-semibold">{feat.title}</h3>
                 <p className="text-neutral-400 leading-relaxed flex-1">
                   {feat.description}
                 </p>

@@ -25,7 +25,7 @@ const SobreNos = () => {
               Sobre a BMF
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.08] tracking-tight">
-              <span className="font-playfair italic text-white/95">Excelência</span>{" "}em proteger{" "}
+              <span className="font-semibold text-white/95">Excelência</span>{" "}em proteger{" "}
               <span className="text-cyan-400">o que importa</span>
             </h1>
             <p className="text-neutral-400 text-lg md:text-xl leading-relaxed font-light">

@@ -23,11 +23,13 @@ export const SaaSHero = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-8 backdrop-blur-sm shadow-[0_0_20px_rgba(6,182,212,0.1)]">
             <Shield size={16} />
+            <span className="font-bold tracking-wider">BMF CORRETORA</span>
+            <span className="opacity-60 px-1">|</span>
             <span>Sua segurança, nossa prioridade</span>
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-white mb-6">
-            <span className="font-playfair italic font-light text-white/95">Proteção</span> para o que importa.<br />
+            <span className="font-semibold text-white/95">Proteção</span> para o que importa.<br />
             Construindo seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Futuro</span>.
           </h1>
           

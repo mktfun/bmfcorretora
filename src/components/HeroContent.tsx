@@ -6,7 +6,7 @@ export const HeroContent = () => {
       {/* Top Title (Centered) */}
       <div className="mt-[20vh] md:mt-[22vh] flex flex-col items-center text-center text-white leading-[0.95]">
         <h1 className="flex flex-col items-center">
-          <span className="font-playfair italic text-6xl sm:text-7xl md:text-[7.5rem] tracking-[-0.05em] hero-anim hero-reveal" style={{ animationDelay: '0.25s' }}>
+          <span className="font-semibold text-6xl sm:text-7xl md:text-[7.5rem] tracking-[-0.05em] hero-anim hero-reveal" style={{ animationDelay: '0.25s' }}>
             Layers hold
           </span>
           <span className="text-6xl sm:text-7xl md:text-[7.5rem] tracking-[-0.08em] font-medium -mt-2 hero-anim hero-reveal" style={{ animationDelay: '0.42s' }}>

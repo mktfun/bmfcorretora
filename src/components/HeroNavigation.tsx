@@ -8,7 +8,7 @@ export const HeroNavigation = () => {
         <svg width="32" height="32" viewBox="0 0 256 256" fill="white" xmlns="http://www.w3.org/2000/svg">
           <path d="M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z" />
         </svg>
-        <span className="text-white text-2xl font-playfair italic mt-1">Lithos</span>
+        <span className="text-white text-2xl font-semibold mt-1">Lithos</span>
       </div>
 
       {/* Center Pill Menu */}

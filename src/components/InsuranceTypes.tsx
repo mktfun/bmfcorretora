@@ -84,7 +84,7 @@ export const InsuranceTypes = () => {
             +6 tipos de seguro
           </span>
           <h2 className="mb-3 sm:mb-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
-            <span className="font-playfair italic text-white/95">Proteção</span>{" "}para o que{" "}
+            <span className="font-semibold text-white/95">Proteção</span>{" "}para o que{" "}
             <span className="text-cyan-400">importa</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-neutral-400 font-light">

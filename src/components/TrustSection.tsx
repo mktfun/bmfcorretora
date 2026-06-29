@@ -104,7 +104,7 @@ export const TrustSection = () => {
             transition={{ delay: 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
             A{" "}
-            <span className="font-playfair italic">BMF Corretora</span>
+            <span className="font-semibold">BMF Corretora</span>
             {" "}em números
           </motion.h2>
           <motion.p 
